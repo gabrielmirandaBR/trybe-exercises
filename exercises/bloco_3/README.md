@@ -1,6 +1,6 @@
 ## Objetivo:
 
-<p> Este bloco visa aprender como estruturar páginas HTML estilizadas com o CSS de uma forma muito prática e criando vários projetos..</p>
+<p> Este bloco visa aprender como estruturar páginas HTML estilizadas com o CSS de uma forma muito prática e criando vários projetos.</p>
 
 <ol>Bloco dividido em quatro partes:
   <li>HTML & CSS - Estruturas de página;</li>
