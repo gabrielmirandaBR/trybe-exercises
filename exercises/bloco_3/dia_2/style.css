@@ -1,0 +1,39 @@
+  body{
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 65px;
+    color: orange;
+    font-family: sans-serif, serif;
+    font-style: italic;
+  }
+
+  p {
+    font-weight: 600;
+    font-size: 3em;
+    text-decoration:underline;   
+  }
+
+  #unordered-list{
+    background-color: rgb(95, 163, 97);
+    line-height: 2em;
+    font-weight: bold;
+  }
+
+  .texts {
+    background-color:rgb(208, 224, 87);
+    text-align: center;
+  }
+
+  #item1{
+    background-color: yellow;
+  }
+
+  #item2{
+    background-color: red;
+  }
+
+  #item3{
+    background-color: brown;
+  }
