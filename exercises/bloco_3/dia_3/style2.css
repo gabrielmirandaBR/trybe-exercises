@@ -8,6 +8,7 @@
     width: 300px;
     position: absolute;
     z-index: 1;
+    top: 500px;
 }
 
 .word {
@@ -26,8 +27,8 @@
     z-index: 6;
     position: absolute;
     width: 300px;
-    top: 500px;
-    left: 140px;
+    top: 480px;
+    left: 320px;
 }
 
 .bowser {
@@ -35,5 +36,5 @@
     position: absolute;
     z-index: 5;
     top: 500px;
-    left: 450px;
+    left: 630px;
 }
