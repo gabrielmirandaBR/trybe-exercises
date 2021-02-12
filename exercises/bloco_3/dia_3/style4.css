@@ -1,11 +1,20 @@
-ol li {
+.ordered-list li {
   background-color: yellow;
 }
 
-.par {
+.ordered-list .par  {
   background-color: green;
 }
 
-.impar {
+.ordered-list .impar {
   text-transform:uppercase;
+}
+
+.header {
+  color: red;
+}
+
+.header em {
+  font-size: 40px;
+  border: 1px solid black;
 }
