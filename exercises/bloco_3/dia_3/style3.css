@@ -5,3 +5,7 @@ h1, p {
 li:hover {
     background-color: olivedrab;
 }
+
+li:active {
+    font-family: monospace;
+}
