@@ -1,0 +1,45 @@
+div:hover {
+    border: 1px solid black;
+}
+
+div:nth-child(3) {
+    background-color: red;
+}
+
+div:nth-child(4) {
+    background-color: green;
+}
+div:nth-child(5) {
+    background-color: yellow;
+    padding: 10px;
+}
+div:nth-child(6) {
+    background-color: olive;
+}
+div:nth-child(7) {
+    background-color: maroon;
+}
+
+#color-pri {
+    color: blue;
+}
+
+#color-sec {
+    color: orange;
+}
+
+#color-com {
+    color: purple;
+}
+
+#color-esc{
+    color: darkgrey;
+}
+
+#color-cla{
+    color: white;
+}
+
+#color-pri, #color-com, #color-cla {
+    font-style: italic;
+}

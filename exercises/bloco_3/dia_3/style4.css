@@ -31,10 +31,6 @@ li em {
   color: blue;
 }
 
-.unordered-list li:nth-child(2), .unordered-list li:nth-child(3) {
-  background-color: pink;
-}
-
 ul li a:hover{
   font-weight: bold;
 }
@@ -54,3 +50,6 @@ ul li a:hover{
   color: yellow;
 }
 
+.unordered-list li:nth-child(2), .unordered-list li:nth-child(3) {
+  background-color: pink;
+}
