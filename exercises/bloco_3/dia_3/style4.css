@@ -1,20 +1,19 @@
-.ordered-list li {
+ol li {
   background-color: yellow;
 }
 
-.ordered-list li:nth-child(even) {
+ol li:nth-child(even) {
   color: green;
 }
-
-.ordered-list li:nth-child(2), .ordered-list li:nth-child(3), .ordered-list li:nth-child(5) {
+ol li:nth-child(3n+2), ol li:nth-child(3) {
   text-transform:uppercase;
-} 
+}
 
-.header {
+h1, h3 {
   color: red;
 }
 
-.header em {
+h1 em, h3 em {
   font-size: 40px;
   border: 1px solid black;
 }
@@ -27,13 +26,19 @@ li em {
   font-weight: bold;
 }
 
-.unordered-list li:nth-child(-n+3) {
+.programming-list li:nth-child(-n+3) {
   color: blue;
+}
+
+.programming-list li:nth-child(2),.programming-list li:nth-child(3) {
+  background-color: pink;
 }
 
 ul li a:hover{
   font-weight: bold;
+  font-family: monospace;
 }
+
 .green:hover {
   color: green;
 }
@@ -50,6 +55,3 @@ ul li a:hover{
   color: yellow;
 }
 
-.unordered-list li:nth-child(2), .unordered-list li:nth-child(3) {
-  background-color: pink;
-}
