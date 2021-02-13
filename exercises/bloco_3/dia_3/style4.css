@@ -6,7 +6,7 @@
   color: green;
 }
 
-.ordered-list li:nth-child(3), .ordered-list li:nth-child(5) {
+.ordered-list li:nth-child(2), .ordered-list li:nth-child(3), .ordered-list li:nth-child(5) {
   text-transform:uppercase;
 } 
 
