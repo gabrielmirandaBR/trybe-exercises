@@ -2,11 +2,11 @@ h1, p {
     text-align: center;
 }
 
-li:hover {
+ol li:hover {
     background-color: olivedrab;
 }
 
-li:active {
+ol li:active {
     font-family: monospace;
 }
 
