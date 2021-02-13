@@ -2,13 +2,13 @@
   background-color: yellow;
 }
 
-.ordered-list .par  {
-  background-color: green;
+.ordered-list li:nth-child(even) {
+  color: green;
 }
 
-.ordered-list .impar {
+.ordered-list li:nth-child(3), .ordered-list li:nth-child(5) {
   text-transform:uppercase;
-}
+} 
 
 .header {
   color: red;
@@ -18,3 +18,39 @@
   font-size: 40px;
   border: 1px solid black;
 }
+
+li {
+  font-size: 20px;
+}
+
+li em {
+  font-weight: bold;
+}
+
+.unordered-list li:nth-child(-n+3) {
+  color: blue;
+}
+
+.unordered-list li:nth-child(2), .unordered-list li:nth-child(3) {
+  background-color: pink;
+}
+
+ul li a:hover{
+  font-weight: bold;
+}
+.green:hover {
+  color: green;
+}
+
+#stack:hover {
+  color: orange;
+}
+
+#mdn:hover {
+  color: black;
+}
+
+#dev:hover {
+  color: yellow;
+}
+
