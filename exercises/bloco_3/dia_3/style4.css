@@ -1,0 +1,55 @@
+.ordered-list li {
+  background-color: yellow;
+}
+
+.ordered-list li:nth-child(even) {
+  color: green;
+}
+
+.ordered-list li:nth-child(3), .ordered-list li:nth-child(5) {
+  text-transform:uppercase;
+} 
+
+.header {
+  color: red;
+}
+
+.header em {
+  font-size: 40px;
+  border: 1px solid black;
+}
+
+li {
+  font-size: 20px;
+}
+
+li em {
+  font-weight: bold;
+}
+
+.unordered-list li:nth-child(-n+3) {
+  color: blue;
+}
+
+ul li a:hover{
+  font-weight: bold;
+}
+.green:hover {
+  color: green;
+}
+
+#stack:hover {
+  color: orange;
+}
+
+#mdn:hover {
+  color: black;
+}
+
+#dev:hover {
+  color: yellow;
+}
+
+.unordered-list li:nth-child(2), .unordered-list li:nth-child(3) {
+  background-color: pink;
+}
