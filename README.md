@@ -2,6 +2,8 @@
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://forthebadge.com)
+<br><br>
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/gabrielmirandaBR/trybe-exercises/master)
 
 ### Este diretório tem o objetivo de armazenar as atividades e projetos realizados na Trybe.
 
