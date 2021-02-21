@@ -26,32 +26,31 @@ li em {
   font-weight: bold;
 }
 
-.programming-list li:nth-child(-n+3) {
+ul:first-of-type li:nth-child(-n+3) {
   color: blue;
 }
 
-.programming-list li:nth-child(2),.programming-list li:nth-child(3) {
+ul:first-of-type li:nth-child(2), ul:first-of-type li:nth-child(3) {
   background-color: pink;
 }
 
-ul li a:hover{
+ul:last-of-type li a:hover {
   font-weight: bold;
   font-family: monospace;
 }
 
-.green:hover {
-  color: green;
-}
-
-#stack:hover {
+li:nth-child(1) a:hover{
   color: orange;
 }
 
-#mdn:hover {
+li:nth-child(2) a:hover, li:nth-child(5) a:hover{
+  color: green;
+}
+
+li:nth-child(3) a:hover{
   color: black;
 }
 
-#dev:hover {
+li:nth-child(4) a:hover{
   color: yellow;
 }
-
