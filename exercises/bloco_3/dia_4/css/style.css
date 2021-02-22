@@ -38,8 +38,10 @@ article {
 }
 
 h2, h3 {
-  padding-top: .5em;
+  padding: .5em 0;
   text-align: center;
+  font-size: 1.5em;
+  color: grey;
 }
 
 p {
@@ -60,9 +62,41 @@ table {
   margin: 2em auto;
 }
 
-
 table th, table td {
   font-size: 1.2em;
   padding: 1em 2em;
   border: 1px solid black;
+}
+
+.description {
+  width: 50%;
+  margin-left: 400px;
+  margin-top: 1em;
+}
+
+.description p, .vision p {
+  font-weight: normal;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.vision {
+  display: inline-block;
+  width: 50%;
+  margin-left: 400px;
+  margin-top: 1em;
+}
+
+
+.description span, .vision span {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.vision img {
+  float: right;
+  width: 250px;
+  margin-left: 1em ;
+  border-radius: 5px;
 }
