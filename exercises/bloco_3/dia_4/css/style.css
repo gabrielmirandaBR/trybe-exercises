@@ -30,48 +30,63 @@ header a{
 }
 
 header a:hover {
-  color: rgb(156, 77, 21);
+  color: darkolivegreen;
 }
 
 article {
   margin: 2em 0;
 }
 
-h2, h3 {
+h2 {
+  padding: .5em 0;
+  text-align: center;
+  font-size: 2.5em;
+  color: darkolivegreen;
+} 
+
+ h3 {
   padding: .5em 0;
   text-align: center;
   font-size: 1.5em;
-  color: grey;
+  color: darkolivegreen
 }
 
-p {
+ p {
+  margin-bottom: 1em;
   padding-left: 2em;
   font-size: 1.2em;
   font-weight: bold;
 }
 
-p span {
+.about p span {
   font-weight: normal;
   font-style: italic;
 }
 
-table {
-  position: absolute;
+.table  {
   padding-left: 2em;
-  text-align: center;
-  margin: 2em auto;
 }
 
-table th, table td {
+.table table {
+  position: absolute;
+  text-align: center;
+}
+
+.table span {
+  font-weight: bold;
+}
+
+.table table th, .table table td {
   font-size: 1.2em;
   padding: 1em 2em;
   border: 1px solid black;
 }
 
 .description {
+  position: relative;
   width: 50%;
-  margin-left: 400px;
-  margin-top: 1em;
+  left: 25%;
+  margin-left: 1em;
 }
 
 .description p, .vision p {
@@ -81,10 +96,11 @@ table th, table td {
 }
 
 .vision {
-  display: inline-block;
+  position: relative;
   width: 50%;
-  margin-left: 400px;
-  margin-top: 1em;
+  left: 25%;
+  margin-top: 2em;
+  margin-left: 1em;
 }
 
 .description span, .vision span {
@@ -96,16 +112,20 @@ table th, table td {
 .vision img {
   float: right;
   width: 250px;
-  margin-left: 1em ;
+  margin-left: 1em;
   border-radius: 5px;
 }
 
 .references {
+  text-align: center;
   margin: 2em 0;
 }
 
+.references h3 {
+  margin-top: 2em;
+}
+
 .references ul {
-  text-align: center;
   padding-left: 1em;
   font-size: 1.5em;
   list-style: none;
@@ -121,7 +141,7 @@ table th, table td {
 }
 
 .references a:hover {
-  color: darkgray;
+  color: darkolivegreen;
 }
 
 footer {
@@ -134,8 +154,7 @@ aside {
   position: absolute;
   right: 0;
   margin-right: 2em;
-  top: 15%;
-
+  top: 10%;
 }
 
 aside li {
