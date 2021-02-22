@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0em;
+}
+
+header {
+  background-color: #f5f5f5;
+}
+
+header h1 {
+  text-align: center;
+  padding-left: 1em;
+  padding: .5em 0;
+}
+
+header nav {
+  text-align: center;
+}
+
+header li {
+  display: inline;
+  padding-left: 1em;
+  font-size: 1.5em;
+}
+
+header a{
+  text-decoration: none;
+  font-weight: 800;
+  color: black;
+}
+
+header a:hover {
+  color: rgb(156, 77, 21);
+}
+
+article {
+  margin: 2em 0;
+}
+
+h2, h3 {
+  padding: .5em 0;
+  text-align: center;
+  font-size: 1.5em;
+  color: grey;
+}
+
+p {
+  padding-left: 2em;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+p span {
+  font-weight: normal;
+  font-style: italic;
+}
+
+table {
+  position: absolute;
+  padding-left: 2em;
+  text-align: center;
+  margin: 2em auto;
+}
+
+table th, table td {
+  font-size: 1.2em;
+  padding: 1em 2em;
+  border: 1px solid black;
+}
+
+.description {
+  width: 50%;
+  margin-left: 400px;
+  margin-top: 1em;
+}
+
+.description p, .vision p {
+  font-weight: normal;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.vision {
+  display: inline-block;
+  width: 50%;
+  margin-left: 400px;
+  margin-top: 1em;
+}
+
+.description span, .vision span {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.vision img {
+  float: right;
+  width: 250px;
+  margin-left: 1em ;
+  border-radius: 5px;
+}
+
+.references {
+  margin: 2em 0;
+}
+
+.references ul {
+  text-align: center;
+  padding-left: 1em;
+  font-size: 1.5em;
+  list-style: none;
+}
+
+.references li {
+  padding-top: .5em;
+}
+
+.references a {
+  font-weight: 800;
+  color: black;
+}
+
+.references a:hover {
+  color: darkgray;
+}
+
+footer {
+  text-align: center;
+  padding: 1em 0;
+  background-color: #a1a1a1;
+}
+
+aside {
+  position: absolute;
+  right: 0;
+  margin-right: 2em;
+  top: 15%;
+
+}
+
+aside li {
+  padding-top: 2em;
+  font-size: 1.1em;
+  font-weight: bold ;
+}
