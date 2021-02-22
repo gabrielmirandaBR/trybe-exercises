@@ -87,7 +87,6 @@ table th, table td {
   margin-top: 1em;
 }
 
-
 .description span, .vision span {
   font-style: normal;
   font-weight: bold;
@@ -135,7 +134,7 @@ aside {
   position: absolute;
   right: 0;
   margin-right: 2em;
-  top: 50%;
+  top: 15%;
 
 }
 
