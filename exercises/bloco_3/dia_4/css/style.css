@@ -4,7 +4,7 @@
 }
 
 header {
-  background-color: #f5f5f5;
+  background-color: rgba(128, 128, 128, 0.308);
 }
 
 header h1 {
@@ -15,15 +15,16 @@ header h1 {
 
 header nav {
   text-align: center;
+  background-color: darkgray;
 }
 
 header li {
   display: inline;
-  padding-left: 1em;
+  padding-left: 3em;
   font-size: 1.5em;
 }
 
-header a{
+header a {
   text-decoration: none;
   font-weight: 800;
   color: black;
@@ -37,25 +38,58 @@ article {
   margin: 2em 0;
 }
 
-h2 {
-  padding: .5em 0;
+h2, h3 {
+  padding-bottom: 1em;
   text-align: center;
   font-size: 2.5em;
   color: darkolivegreen;
 } 
 
- h3 {
-  padding: .5em 0;
-  text-align: center;
-  font-size: 1.5em;
-  color: darkolivegreen
-}
-
- p {
-  margin-bottom: 1em;
-  padding-left: 2em;
+p {
+  padding-left: 3.5em;
   font-size: 1.2em;
   font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 1em 0;
+  background-color: rgba(128, 128, 128, 0.308);
+}
+
+aside {
+  position: absolute;
+  right: 0;
+  margin-right: 2em;
+  margin-top: 3em;
+  top: 10%;
+}
+
+aside li {
+  padding-top: 2em;
+  font-size: 1.1em;
+  font-weight: bold ;
+}
+
+table {
+  position: absolute;
+  text-align: center;
+  height: 460px;
+  background-color: rgba(128, 128, 128, 0.5);
+  border-radius: 5px;
+  
+}
+
+table th, table td {
+  font-size: 1.2em;
+  padding: 1em 2em;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.table  {
+  margin-top: 1em;
+  padding-left: 4em;
 }
 
 .about p span {
@@ -63,50 +97,39 @@ h2 {
   font-style: italic;
 }
 
-.table  {
-  padding-left: 2em;
-}
-
-.table table {
-  position: absolute;
-  text-align: center;
-}
-
 .table span {
   font-weight: bold;
 }
 
-.table table th, .table table td {
-  font-size: 1.2em;
-  padding: 1em 2em;
-  border: 1px solid black;
-}
-
-.description {
+.description, .vision {
   position: relative;
   width: 50%;
-  left: 25%;
+  left: 30%;
   margin-left: 1em;
+  margin-bottom: 1em;
+  background-color: rgba(128, 128, 128, 0.5);
+  border-radius: 10px;
+}
+
+.description h3, .vision h3 {
+  padding: 0.2em;
 }
 
 .description p, .vision p {
   font-weight: normal;
   line-height: 1.5;
   text-align: justify;
-}
-
-.vision {
-  position: relative;
-  width: 50%;
-  left: 25%;
-  margin-top: 2em;
-  margin-left: 1em;
+  padding: 1em;
 }
 
 .description span, .vision span {
   font-style: normal;
   font-weight: bold;
   font-size: 1.1em;
+}
+
+.vision {
+  padding-bottom: 2em;
 }
 
 .vision img {
@@ -122,7 +145,7 @@ h2 {
 }
 
 .references h3 {
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 .references ul {
@@ -144,21 +167,3 @@ h2 {
   color: darkolivegreen;
 }
 
-footer {
-  text-align: center;
-  padding: 1em 0;
-  background-color: #a1a1a1;
-}
-
-aside {
-  position: absolute;
-  right: 0;
-  margin-right: 2em;
-  top: 10%;
-}
-
-aside li {
-  padding-top: 2em;
-  font-size: 1.1em;
-  font-weight: bold ;
-}
