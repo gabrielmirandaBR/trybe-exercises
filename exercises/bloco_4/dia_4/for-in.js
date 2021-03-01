@@ -2,6 +2,6 @@
 
 let fruits = ["Apple", "Banana", "Orange"];
 
-for (let index in fruits) {
-  console.log(fruits[index]);
+for (let key in fruits) {
+  console.log(fruits[key]);
 }
