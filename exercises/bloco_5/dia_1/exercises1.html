@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2 id="page-title">Título</h2>
+    <p id="paragraph" class="paragraph">Dê uma cor para este parágrafo!</p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p id="second-paragraph"class="paragraph">Segundo parágrafo!</p>
+
+    <script>
+      var paragraph = document.querySelector("#paragraph");
+      paragraph.style.color = "red";
+
+      let title = document.querySelector("#page-title").innerText = "O Senhor dos Anéis";
+
+      let paragraph2 = document.querySelector("#second-paragraph").innerHTML = "Segundo Paráfrago Novo!";
+
+      let subTitle = document.querySelector("#subtitle").innerHTML = "Oi!";
+
+      let paragraphStyle = document.querySelectorAll("p");
+      for (index = 0; index < paragraphStyle.length; index += 1) {
+        paragraphStyle[index].style.color = "red"; 
+      }
+
+      let paragraphClass = document.querySelectorAll(".paragraph")[0].innerText = "O Batman";
+
+      let subtitleTag = document.querySelectorAll("h4")[0].innerText = "oi de novo!";
+
+    </script>
+  </body>
+</html>
