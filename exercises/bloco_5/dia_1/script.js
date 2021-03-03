@@ -14,6 +14,3 @@ backgroundDiv[1].style.backgroundColor = "yellow"
 //
 let backgroundFooter = document.querySelector("footer");
 backgroundFooter.style.backgroundColor = "darkgreen"
-
-
-

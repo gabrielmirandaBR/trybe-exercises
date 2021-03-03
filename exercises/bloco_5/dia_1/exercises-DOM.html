@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    <div class="main-content">
+      <div class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </div>
+    </div>
+    <script>
+      function changeDescription(tag, index) {
+        let newText = document.getElementsByTagName(tag)[index];
+        newText.innerText = "Eu me vejo trabalhando em um local harmonioso, produtivo, além de estar feliz e com $ no bolso."
+      }
+      changeDescription('p', 1);
+      
+      function changeBackgroundColorMain (classe, color) {
+        let backgroundColorMain = document.getElementsByClassName(classe)[0];
+        backgroundColorMain.style.backgroundColor = color;
+      }
+      changeBackgroundColorMain('main-content', 'rgb(76,164,109)');  
+      
+      function changeBackgroundColorBox (classe, color) {
+        let centerBox = document.getElementsByClassName(classe)[0];
+        centerBox.style.backgroundColor = color;
+      }
+      changeBackgroundColorBox('center-content', 'white');
+
+      function changeTitle (tag) {
+        let changeTitle = document.getElementsByTagName (tag)[0];
+        changeTitle.innerHTML = "Bloco 5 - Dia 1 - DOM e Seletores";
+      }
+      changeTitle ('h1');
+
+      function changeText (tag) {
+        let element = document.getElementsByTagName(tag);
+        for (let index = 0; index < element.length; index += 1) {
+        element[index].style.textTransform = 'uppercase';
+        }
+      }
+      changeText('p');
+
+      function showTags (tag) {
+        let show = document.getElementsByTagName(tag);
+        for(let index = 0; index < show.length; index += 1) {
+          console.log (show[index].innerHTML);
+        }
+      }
+      showTags('p');
+      
+    </script>
+  </body>
+</html>
