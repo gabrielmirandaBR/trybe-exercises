@@ -1,0 +1,83 @@
+
+<div id="paiDoPai">
+  <div id="pai">
+    <div id="primeiroFilho"></div>
+    <div id="elementoOndeVoceEsta">
+      <div id="primeiroFilhoDoFilho"></div>
+      <div id="segundoEUltimoFilhoDoFilho"></div>
+    </div>
+    Atenção!
+    <div id="terceiroFilho"></div>
+    <div id="quartoEUltimoFilho"></div>
+  </div>
+</div>
+
+<script>
+  let selectElement = document.querySelector('#elementoOndeVoceEsta');
+  console.log(selectElement);
+  let father = selectElement.parentNode.style.color = 'red';
+
+
+  let selectElement2 = document.getElementById('primeiroFilhoDoFilho');
+  selectElement2.innerText = 'oi tudo bem?';
+
+
+  let firstSon = document.getElementById('pai').firstElementChild;
+  console.log(firstSon);
+
+
+  let firstSon2 = document.getElementById('elementoOndeVoceEsta').previousElementSibling;
+  console.log(firstSon2);
+
+
+  let warning = document.querySelector('#elementoOndeVoceEsta').nextSibling;
+  console.log(warning);
+
+
+  let thirdSon = document.querySelector('#elementoOndeVoceEsta').nextElementSibling;
+  console.log(thirdSon);
+
+
+  let thirdSon2 = document.getElementById('pai').childNodes;
+  console.log(thirdSon2[5]);
+
+
+  let father1 = document.querySelector('#pai');
+  let brother = document.createElement('div');
+  father1.appendChild(brother);
+
+
+  let father3 = document.querySelector('#elementoOndeVoceEsta');
+  let son = document.createElement('div');
+  father3.appendChild(son);
+
+
+  let father4 = document.querySelector('#primeiroFilhoDoFilho');
+  let son2 = document.createElement('h2');
+  father4.appendChild(son2);
+
+
+  let element1 = document.getElementsByTagName('h2')[0].parentNode.parentNode.nextElementSibling;
+  console.log(element1);
+
+
+
+
+
+ 
+
+</script>
+
+<!-- 
+Acesse o elemento elementoOndeVoceEsta .
+Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+Acesse o primeiroFilho a partir de pai .
+Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .
+Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta .
+Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta .
+Agora acesse o terceiroFilho a partir de pai .
+Crie um irmão para elementoOndeVoceEsta .
+Crie um filho para elementoOndeVoceEsta .
+Crie um filho para primeiroFilhoDoFilho .
+A partir desse filho criado, acesse terceiroFilho . -->
