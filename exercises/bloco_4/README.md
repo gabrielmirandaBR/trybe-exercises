@@ -7,6 +7,5 @@
   <li>JavaScript - Primeiros Passos;</li>
   <li>JavaScript - Array e loop for;</li>
   <li>JavaScript - Lógica de Programação e Algoritmos;</li>
-  <li>JavaScript - Objetos e funções;</li>
-  <li>Projeto - PlayGound Functions.</li>
+  <li>JavaScript - Objetos e funções.</li>
 </ol>
