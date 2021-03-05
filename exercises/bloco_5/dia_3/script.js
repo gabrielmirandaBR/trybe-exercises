@@ -57,3 +57,14 @@ function changeColor () {
     item.style.backgroundColor = 'rgb(280,258,258)';
   }
 }
+
+
+// 4.
+function createButton2(string) {
+  let accessButtonContainer = document.querySelector('.buttons-container');
+  let fridayButton = document.createElement('button');
+  fridayButton.id = 'btn-friday';
+  fridayButton.innerText = string;
+  accessButtonContainer.appendChild(fridayButton);
+}
+createButton2('Sexta-feira');
