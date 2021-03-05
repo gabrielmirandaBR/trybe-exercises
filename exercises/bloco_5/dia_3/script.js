@@ -37,13 +37,23 @@ for (index = 0; index < dezDaysList.length; index += 1) {
 
 
 // 2.
-
+let button = document.createElement('button');
 function createButton (string) {
   let buttonContainer = document.querySelector('.buttons-container');
-  let button = document.createElement('button');
   button.id = 'btn-holiday';
   button.innerText = string;
   buttonContainer.appendChild(button);
-  console.log(button);
 }
 createButton('Feriados');
+
+
+// 3.
+button.addEventListener('click', changeColor);
+
+function changeColor () {
+  let holidayDays = document.querySelectorAll('li.day.holiday');
+  for (let index = 0; index < holidayDays.length; index += 1) {
+    let item = holidayDays[index];
+    item.style.backgroundColor = 'rgb(280,258,258)';
+  }
+}
