@@ -26,11 +26,11 @@ for (index = 0; index < dezDaysList.length; index += 1) {
   listItem.className = 'day';
   listItem.innerText = item;
 
-  if (dezDaysList[index] === 24 || dezDaysList[index] === 25 || dezDaysList[index] === 31) {
-    listItem.className = 'day holiday';
-  } else if (dezDaysList[index] === 4 || dezDaysList[index] === 11 || dezDaysList[index] === 18 || dezDaysList[index] === 25) {
+  if (dezDaysList[index] === 4 || dezDaysList[index] === 11 || dezDaysList[index] === 18 || dezDaysList[index] === 25) {
     listItem.className = 'day friday';
-  }
+  } else if (dezDaysList[index] === 24 || dezDaysList[index] === 25 || dezDaysList[index] === 31) {
+    listItem.className = 'day holiday';
+  } 
   
   accessList.appendChild(listItem);
 }
@@ -48,23 +48,34 @@ createButton('Feriados');
 
 
 // 3.
-button.addEventListener('click', changeColor);
-
-function changeColor () {
-  let holidayDays = document.querySelectorAll('li.day.holiday');
+button.addEventListener('click', function () {
+  let holidayDays = document.querySelectorAll('li.day');
   for (let index = 0; index < holidayDays.length; index += 1) {
-    let item = holidayDays[index];
-    item.style.backgroundColor = 'rgb(280,258,258)';
+    if (index === 25 || index === 26 || index === 32) {
+      let item = holidayDays[index];
+      item.style.backgroundColor = 'rgb(280,258,258)';
+    }
   }
-}
+});
 
 
 // 4.
+let fridayButton = document.createElement('button');
 function createButton2(string) {
   let accessButtonContainer = document.querySelector('.buttons-container');
-  let fridayButton = document.createElement('button');
   fridayButton.id = 'btn-friday';
   fridayButton.innerText = string;
   accessButtonContainer.appendChild(fridayButton);
 }
 createButton2('Sexta-feira');
+
+
+// 5.
+
+fridayButton.addEventListener('click', function (string) {
+  let holidays = document.querySelectorAll('li.day.friday');
+  for (let index = 0; index < holidays.length; index += 1) {
+    let holiday = holidays[index];
+    holiday.innerText = 'SEXTOU';
+  }
+});
