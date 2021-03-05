@@ -15,6 +15,7 @@ createDaysOfTheWeek();
 
 // Escreva seu código abaixo.
 
+// 1.
 const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
 let accessList = document.querySelector('#days');
@@ -32,7 +33,17 @@ for (index = 0; index < dezDaysList.length; index += 1) {
   }
   
   accessList.appendChild(listItem);
-  console.log(listItem);
 }
 
 
+// 2.
+
+function createButton (string) {
+  let buttonContainer = document.querySelector('.buttons-container');
+  let button = document.createElement('button');
+  button.id = 'btn-holiday';
+  button.innerText = string;
+  buttonContainer.appendChild(button);
+  console.log(button);
+}
+createButton('Feriados');
