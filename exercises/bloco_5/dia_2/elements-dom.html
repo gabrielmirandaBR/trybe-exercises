@@ -121,8 +121,27 @@
 
       /* 2 parte */
       textH1.className = 'title';
-      
 
+
+      let h3Access = document.querySelectorAll('h3');
+      for (index = 0; index < h3Access.length; index += 1) {
+        h3Access[index].className = 'description ';
+      }
+
+
+      let mainAccess = document.querySelector('.main-content').childNodes[1];
+      mainAccess.remove();
+
+
+      let divAccess = document.getElementsByClassName('right-content')[0].style.marginRight = 'auto';
+
+      let divAccess2 = document.querySelector('.center-content').style.backgroundColor = 'green';
+
+
+      let listAccess = document.getElementsByTagName('li');
+      listAccess[9].remove();
+      listAccess[8].remove();
+      
     </script>
   </body>
 </html>
