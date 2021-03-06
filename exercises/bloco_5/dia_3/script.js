@@ -111,7 +111,6 @@ zoomOut();
 
 
 // 7.
-
 function createActivities (string) {
   let activity = document.createElement('span');
   activity.innerText = string;
@@ -120,3 +119,13 @@ function createActivities (string) {
 }
 createActivities('Pescar');
 
+
+// 8.
+function createTag (color) {
+  let tag = document.createElement('div');
+  tag.className = 'task';
+  tag.style.backgroundColor = color;
+
+  document.querySelector('.my-tasks').appendChild(tag);
+}
+createTag('blue');
