@@ -37,19 +37,19 @@ for (index = 0; index < dezDaysList.length; index += 1) {
 
 
 // 2.
-let button = document.createElement('button');
+let holidayButton = document.createElement('button');
 function createButton (string) {
   let buttonContainer = document.querySelector('.buttons-container');
-  button.id = 'btn-holiday';
-  button.innerText = string;
-  buttonContainer.appendChild(button);
+  holidayButton.id = 'btn-holiday';
+  holidayButton.innerText = string;
+  buttonContainer.appendChild(holidayButton);
 }
 createButton('Feriados');
 
 
 // 3.
 
-button.addEventListener('click', function () {
+holidayButton.addEventListener('click', function () {
   let days = document.querySelectorAll('li.day');
   for (let index = 0; index < days.length; index += 1) {
     if (index === 25 || index === 26 || index === 32) {
@@ -77,14 +77,35 @@ createButton2('Sexta-feira');
 
 // 5.
 let fridayDays = [4, 11, 18, 25];
-fridayButton.addEventListener('click', function (string) {
+fridayButton.addEventListener('click', function () {
   let holidays = document.querySelectorAll('li.day.friday');
   for (let index = 0; index < holidays.length; index += 1) {
     let holiday = holidays[index];
-    if(holiday.innerText !== 'SEXTOU') {
+    if (holiday.innerText !== 'SEXTOU') {
       holiday.innerText = 'SEXTOU';
     } else {
     holiday.innerText = fridayDays[index];
     }
   }
 });
+
+
+// 6.
+function zoomIn () {
+  let days = document.querySelector('#days');
+
+  days.addEventListener ('mouseover', function (event) {
+    event.target.style.fontSize = '25px';
+  })
+};
+zoomIn();
+
+function zoomOut () {
+  let days = document.querySelector('#days');
+
+  days.addEventListener('mouseout', function (event) {
+    event.target.style.fontSize = '20px';
+  })
+};
+zoomOut();
+
