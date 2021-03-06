@@ -134,10 +134,10 @@ createTag('blue');
 // 9.
 let tag = document.querySelector ('.task')
 
-tag.addEventListener('click', function () {
+tag.addEventListener('click', function (event) {
   if (tag.className === 'task') {
-    tag.className = 'task selected';
+    event.target.className = 'task selected';
   } else {
-    tag.className = 'task'
+    event.target.className = 'task'
   }
 });
