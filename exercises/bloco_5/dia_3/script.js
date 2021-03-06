@@ -48,7 +48,6 @@ createButton('Feriados');
 
 
 // 3.
-
 holidayButton.addEventListener('click', function () {
   let days = document.querySelectorAll('li.day');
   for (let index = 0; index < days.length; index += 1) {
@@ -144,8 +143,6 @@ tag.addEventListener('click', function (event) {
 
 
 // 10.
-
-
 function addEvent () {
   let days = document.querySelector('#days');
   let selectedTag = document.getElementsByClassName('task selected');
@@ -164,3 +161,31 @@ addEvent();
 
 
 // Bônus.
+
+function addCompromise () {
+  let textBox = document.querySelector('#task-input');
+  let button = document.querySelector('#btn-add');
+  let listCompromises = document.querySelector('.task-list');
+  listCompromises.innerHTML = 'MEUS COMPROMISSOS';
+
+  button.addEventListener('click', function () {
+    if (textBox.value === '') {
+      alert('Por favor, insira um compromisso');
+    } else {
+      listItem = document.createElement('li');
+      listItem.innerText = textBox.value;
+      listCompromises.appendChild(listItem);
+    }
+  });
+
+  textBox.addEventListener('keyup', function (event) {
+    if (event.keyCode === 13 && textBox.value !== '') {
+      listItem = document.createElement('li');
+      listItem.innerText = textBox.value;
+      listCompromises.appendChild(listItem);
+      } else if (event.keyCode === 13 && textBox.value === '') {
+        alert('Por favor, insira um compromisso');
+    }
+  });
+}
+addCompromise();
