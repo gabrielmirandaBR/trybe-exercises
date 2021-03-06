@@ -109,3 +109,14 @@ function zoomOut () {
 };
 zoomOut();
 
+
+// 7.
+
+function createActivities (string) {
+  let activity = document.createElement('span');
+  activity.innerText = string;
+
+  document.querySelector('.my-tasks').appendChild(activity);
+}
+createActivities('Pescar');
+
