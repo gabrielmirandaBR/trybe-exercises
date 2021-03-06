@@ -129,3 +129,15 @@ function createTag (color) {
   document.querySelector('.my-tasks').appendChild(tag);
 }
 createTag('blue');
+
+
+// 9.
+let tag = document.querySelector ('.task')
+
+tag.addEventListener('click', function () {
+  if (tag.className === 'task') {
+    tag.className = 'task selected';
+  } else {
+    tag.className = 'task'
+  }
+});
