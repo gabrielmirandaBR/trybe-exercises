@@ -48,12 +48,17 @@ createButton('Feriados');
 
 
 // 3.
+
 button.addEventListener('click', function () {
-  let holidayDays = document.querySelectorAll('li.day');
-  for (let index = 0; index < holidayDays.length; index += 1) {
+  let days = document.querySelectorAll('li.day');
+  for (let index = 0; index < days.length; index += 1) {
     if (index === 25 || index === 26 || index === 32) {
-      let item = holidayDays[index];
-      item.style.backgroundColor = 'rgb(280,258,258)';
+      let item = days[index];
+      if(item.style.backgroundColor === '') {
+        item.style.backgroundColor = 'rgb(280,258,258)';
+      } else {
+        item.style.backgroundColor = '';
+      }
     }
   }
 });
@@ -71,11 +76,15 @@ createButton2('Sexta-feira');
 
 
 // 5.
-
+let fridayDays = [4, 11, 18, 25];
 fridayButton.addEventListener('click', function (string) {
   let holidays = document.querySelectorAll('li.day.friday');
   for (let index = 0; index < holidays.length; index += 1) {
     let holiday = holidays[index];
-    holiday.innerText = 'SEXTOU';
+    if(holiday.innerText !== 'SEXTOU') {
+      holiday.innerText = 'SEXTOU';
+    } else {
+    holiday.innerText = fridayDays[index];
+    }
   }
 });
