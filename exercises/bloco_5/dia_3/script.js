@@ -132,7 +132,7 @@ createTag('blue');
 
 
 // 9.
-let tag = document.querySelector ('.task')
+let tag = document.querySelector ('.task');
 
 tag.addEventListener('click', function (event) {
   if (tag.className === 'task') {
@@ -141,3 +141,26 @@ tag.addEventListener('click', function (event) {
     event.target.className = 'task'
   }
 });
+
+
+// 10.
+
+
+function addEvent () {
+  let days = document.querySelector('#days');
+  let selectedTag = document.getElementsByClassName('task selected');
+  let colorTag = tag.style.backgroundColor;
+
+  days.addEventListener('click', function(event) {
+    let colorDay = event.target.style.color;
+    if (selectedTag.length > 0 && colorDay !== colorTag) {
+      event.target.style.color = colorTag;
+    } else if (selectedTag !== 0 && colorDay === colorTag) {
+      event.target.style.color = 'rgb(119,119,119)';
+    }
+  });
+}
+addEvent();
+
+
+// Bônus.
