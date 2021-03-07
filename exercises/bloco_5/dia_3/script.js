@@ -42,10 +42,10 @@ createDaysofTheMoth();
 
 // 2.
 let holidayButton = document.createElement('button');
-function createButton (string) {
+function createButton (buttonName) {
   let buttonContainer = document.querySelector('.buttons-container');
   holidayButton.id = 'btn-holiday';
-  holidayButton.innerText = string;
+  holidayButton.innerHTML = buttonName;
   buttonContainer.appendChild(holidayButton);
 }
 createButton('Feriados');
@@ -66,10 +66,10 @@ holidayButton.addEventListener('click', function () {
 
 // 4.
 let fridayButton = document.createElement('button');
-function createButton2(string) {
+function createButton2(buttonName) {
   let accessButtonContainer = document.querySelector('.buttons-container');
   fridayButton.id = 'btn-friday';
-  fridayButton.innerText = string;
+  fridayButton.innerHTML = buttonName;
   accessButtonContainer.appendChild(fridayButton);
 }
 createButton2('Sexta-feira');
@@ -79,14 +79,13 @@ createButton2('Sexta-feira');
 let fridayDays = [4, 11, 18, 25];
 
 fridayButton.addEventListener('click', function () {
-  let holidays = document.querySelectorAll('li.day.friday');
+  let listFridays = document.querySelectorAll('.friday');
 
-  for (let index = 0; index < holidays.length; index += 1) {
-    let holiday = holidays[index];
-    if (holiday.innerText !== 'SEXTOU') {
-      holiday.innerText = 'SEXTOU';
+  for (let index = 0; index < listFridays.length; index += 1) {
+    if (listFridays[index].innerHTML !== 'SEXTOU') {
+      listFridays[index].innerHTML = 'SEXTOU';
     } else {
-    holiday.innerText = fridayDays[index];
+      listFridays[index].innerHTML = fridayDays[index];
     }
   }
 });
