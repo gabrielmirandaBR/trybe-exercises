@@ -26,6 +26,7 @@ function createDaysofTheMoth () {
     let listItem = document.createElement('li');
     listItem.innerHTML = day;
     accessList.appendChild(listItem);
+    
     if (day === 24 || day === 31) {
       listItem.className = 'day holiday';
     } else if (day === 4 || day === 11 || day === 18) {
@@ -56,6 +57,7 @@ holidayButton.addEventListener('click', function () {
   let listHolidays = document.querySelectorAll('.holiday');
 
   for (let index = 0; index < listHolidays.length; index += 1) {
+
     if (listHolidays[index].style.backgroundColor === 'white') {
       listHolidays[index].style.backgroundColor = 'rgb(238,238,238)';
     } else {
@@ -82,6 +84,7 @@ fridayButton.addEventListener('click', function () {
   let listFridays = document.querySelectorAll('.friday');
 
   for (let index = 0; index < listFridays.length; index += 1) {
+
     if (listFridays[index].innerHTML !== 'SEXTOU') {
       listFridays[index].innerHTML = 'SEXTOU';
     } else {
@@ -94,7 +97,6 @@ fridayButton.addEventListener('click', function () {
 // 6.
 function zoomIn () {
   let days = document.querySelector('#days');
-
   days.addEventListener ('mouseover', function (event) {
     event.target.style.fontSize = '25px';
   })
@@ -103,7 +105,6 @@ zoomIn();
 
 function zoomOut () {
   let days = document.querySelector('#days');
-
   days.addEventListener('mouseout', function (event) {
     event.target.style.fontSize = '20px';
   })
@@ -114,8 +115,7 @@ zoomOut();
 // 7.
 function createActivities (string) {
   let activity = document.createElement('span');
-  activity.innerText = string;
-
+  activity.innerHTML = string;
   document.querySelector('.my-tasks').appendChild(activity);
 }
 createActivities('Pescar');
@@ -136,6 +136,7 @@ createTag('blue');
 let tag = document.querySelector ('.task');
 
 tag.addEventListener('click', function (event) {
+
   if (tag.className === 'task') {
     event.target.className = 'task selected';
   } else {
@@ -152,6 +153,7 @@ function addEvent () {
 
   days.addEventListener('click', function(event) {
     let colorDay = event.target.style.color;
+
     if (selectedTag.length > 0 && colorDay !== colorTag) {
       event.target.style.color = colorTag;
     } else if (selectedTag !== 0 && colorDay === colorTag) {
