@@ -4,100 +4,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
     <title>Bloco 5 Dia 1</title>
-    <link rel="stylesheet" href="bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css">
-    <script src="/jquery-3.6.0.min.js"></script>
-    <script src="/bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js"></script>
   </head>
 
   <body>
-    <header id="header-container">
-      <h1 class="display-4 text-muted">Formulário para Currículos</h1>
-      <p><em>Preencha os dados abaixo.</em></p>
+    <header>
+      <h1 class="display-4">Formulário para Currículos</h1>
+      <p class="lead"><em>Preencha os dados abaixo.</em></p>
     </header>
 
-    <form action="" method="GET" id="form-container">
-      <div id="form-content">
+    <form action="" method="GET" class="row g-3">
+      <fieldset class="row mb-3">
+        <legend class="col-form-label col-sm-2 pt-0">Dados Pessoais</legend>
+        <div class="mb-3">
+          <label class="form-label" for="name">Nome:
+            <input class="form-control" type="text" name="name" id="name" maxlength="40" placeholder="Digite seu nome" required>
+          </label>
+        </div>
 
-        <fieldset id="personal-informations">
-          <legend>Dados Pessoais</legend>
-          <div class="input-group"></div>
-            <label for="name">Nome:
-              <input class='form-control' type="text" name="name" id="name" maxlength="40" placeholder="Digite seu nome" required>
-            </label>
+        <div class="mb-3">
+          <label class="form-label" for="email">Email:
+            <input class="form-control" type="text" name="email" id="email" maxlength="50" placeholder="Digite seu email" required>
+          </label>
+        </div>
 
-          </div>
-          
-          <div class="input-group">
-            <label for="email">Email:
-              <input class='form-control'  type="text" name="email" id="email" maxlength="50" placeholder="Digite seu email" required>
-            </label>
-          </div>
+        <div class="mb-3">
+          <label class="form-label" for="cpf">CPF:
+            <input class="form-control" type="text" name="cpf" id="cpf" maxlength="11" placeholder="000.000.000-00" required>
+          </label>
+        </div>
 
-          <div class="input-group">
-            <label for="cpf">CPF:
-              <input class='form-control' type="text" name="cpf" id="cpf" maxlength="11" placeholder="000.000.000-00" required>
-            </label>
-          </div>
+        <div class="mb-3">
+          <label class="form-label" for="adress">Endereço:
+            <input class="form-control" type="text" name="adress" id="adress" maxlength="200" placeholder="Digite seu endereço" required>
+          </label>
+        </div>
 
-          <div class="input-group">
-            <label for="adress">Endereço:
-              <input class='form-control' type="text" name="adress" id="adress" maxlength="200" placeholder="Digite seu endereço" required>
-            </label>
-          </div>
+        <div class="mb-3">
+          <label class="form-label" for="city">Cidade:
+            <input class="form-control" type="text" name="city" id="city" maxlength="28" placeholder="Digite sua cidade" required>
+          </label>
+        </div>
 
-          <div class="input-group">
-            <label for="city">Cidade:
-              <input class='form-control' type="text" name="city" id="city" maxlength="28" placeholder="Digite sua cidade" required>
-            </label>
-          </div>
+        <div class="dropdown">
+          <label class="form-label" for="estate">Estado:
+            <select class="form-select" name="estate" id="estate" required></select>
+          </label>
+        </div>
+      </fieldset>
 
-          <div class="input-group">
-            <label for="estate">Estado:
-              <select class="form-control" name="estate" id="estate" required></select>
-            </label>
-          </div>
-        </fieldset>
+      <fieldset class="row mb-3">
+        <legend class="col-form-label col-sm-2 pt-0">Dados Profissionais</legend>
+        <div class="mb-3">
+          <label class="form-label" for="resume">Resumo Profissional:
+            <textarea class="form-control" name="resume" id="resume"  maxlength="1000" cols="30" rows="10" placeholder="Escreva o seu resumo profissonal com até 1.000 caracteres" required></textarea>
+          </label>
+        </div>
 
-        <fieldset id="profisional-informations">
-          <legend>Dados Profissionais</legend>
-          <div class="input-group">
-            <label for="resume">Resumo Profissional:
-              <textarea class="form-control" name="resume" id="resume"  maxlength="1000" cols="30" rows="10" placeholder="Escreva o seu resumo profissonal com até 1.000 caracteres" required></textarea>
-            </label>
-          </div>
+        <div class="">
+          <label class="form-label" for="office">Cargo:
+            <input class="form-control" type="text" maxlength="40" id="office" name="office" required>
+          </label>
+        </div>
 
-          <div class="input-group">
-            <label for="office">Cargo:
-              <input class='form-control' type="text" maxlength="40" id="office" name="office" required>
-            </label>
-          </div>
+        <div class="">
+          <label class="form-label" for="description">Descrição do cargo:
+            <input class="form-control" type="text" maxlength="500" id="description" name="description" required>
+          </label>
+        </div>
 
-          <div class="input-group">
-            <label for="description">Descrição do cargo:
-              <input class='form-control' type="text" maxlength="500" id="description" name="description" required>
-            </label>
-          </div>
+        <div class="">
+          <label class="form-label" for="date"> Data: 
+            <input class="form-control" type="date" name="date" id="date" required>
+          </label>
+        </div>
+      </fieldset>
+    
+    <div id="buttons-container">
+      <button class="btn btn-outline-success" type="submit" id="submit">Enviar</button>
+      <button class="btn btn-outline-danger" type="reset" id="clear">Limpar</button>
+    </div>
 
-          <div class="input-group">
-            <label for="date"> Data: 
-              <input class='form-control' type="date" name="date" id="date" required>
-            </label>
-          </div>
-
-        </fieldset>
-      </div>
-
-      <div id="buttons-container">
-        <button type="submit" id="submit" class="btn btn-success">Enviar</button>
-        <button type="reset" id="clear" class="btn btn-success">Limpar</button>
-      </div>
-
-      <div id="curriculum">
-      </div>
+    <div id="curriculum">
+    </div>
     </form>
 
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
-  <script src="/script.js"></script>
+  
+  <script src="script.js"></script>
   
 </html>
