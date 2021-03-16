@@ -32,10 +32,10 @@ createEstates();
 
 submitButton.addEventListener('click', function(event) {
   event.preventDefault();
-  verifyEmail();
+  let print;
   for (let index = 0; index < inputAll.length; index += 1) {
-    if(inputAll.length > 0) {
-      let print = document.createElement('div');
+    if (inputAll.length > 0) {
+      print = document.createElement('div');
       print.className = 'item-print';
       print.innerHTML = inputAll[index].value;
       curriculumContainer.style.border = '1px solid black';
@@ -44,6 +44,7 @@ submitButton.addEventListener('click', function(event) {
       curriculumContainer.appendChild(print); 
     }
   }
+  print.innerHTML = document.getElementById('estate').value.toUpperCase();
 });
 
 clearButton.addEventListener('click', function(event) {
