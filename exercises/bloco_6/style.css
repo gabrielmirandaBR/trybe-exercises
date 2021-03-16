@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.3;
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 30px 30px;
+}
+
+form {
+  width: 80%;
+}
+
+input {
+  width: 50%;
+  padding: 3px;
+}
+
+fieldset {
+  background-color: rgba(127, 255, 212, 0.452);
+}
+
+.line {
+  margin: 15px 5px;
+  width: 100%;
+}
+
+textarea {
+  margin-top: 5px;
+  resize: none;
+}
+
+#submit , #clear {
+  margin: 10px 0;
+  padding: 5px;
+}
+
+.item-print {
+  line-height: 1.5;
+}
+
+#curriculum {
+  width: 100%;
+}
