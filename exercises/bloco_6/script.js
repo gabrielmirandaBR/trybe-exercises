@@ -3,7 +3,7 @@ const selectDate = document.getElementById('date').value;
 const submitButton = document.getElementById('submit');
 const inputAll = document.querySelectorAll('input');
 const curriculumContainer = document.getElementById('curriculum');
-const clearButton = document.getElementById('clear')
+const clearButton = document.getElementById('clear');
 
 function createEstates () {
   const estates = ['AC', 'AL', 'AP','AM', 'BA','CE', 'DF', 
@@ -19,16 +19,15 @@ function createEstates () {
 }
 createEstates();
 
-function verifyDate(date) {
-  const day = date.substring(0,2);
-  const month = date.substring(3,5);
-  const year = date.substring(6,10);
+/* document.addEventListener('click', function () {
+  const day = selectDate.substring(0,2);
+  const month = selectDate.substring(3,5);
+  const year = selectDate.substring(6,10);
   if((day < 31 && day > 0) && (month < 13 && month > 0) && (year > 0 && year.length === 4)) {
     return true;
   }
-  return false;
-}
-verifyDate('15/12/1992');
+    return false;
+}); */
 
 submitButton.addEventListener('click', function(event) {
   event.preventDefault();
