@@ -5,43 +5,71 @@
 }
 
 body {
+  color: rgb(93, 96, 99);
+  background-color: rgb(234, 237, 240);
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
   line-height: 1.3;
-  font-family: Helvetica, Arial, sans-serif;
-  margin: 30px 30px;
+  margin: 30px;
 }
 
-form {
+#header-container {
+  background-color: rgb(246, 247, 248);
+  border: 1px solid rgb(214, 217, 220);
+  border-radius: 3px;
+  margin: 40px auto;
+  padding: 50px;
+  text-align: center;
   width: 80%;
 }
 
-input {
-  width: 50%;
-  padding: 3px;
+#header-container h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
 }
 
-fieldset {
-  background-color: rgba(127, 255, 212, 0.452);
+#form-container {
+  background-color: rgb(246, 247, 248);
+  border: 1px solid rgb(214, 217, 220);
+  border-radius: 3px;
+  margin: 0 auto 40px auto;
+  width: 80%;
+  padding: 50px;
+}
+
+legend {
+  margin-left: 15px;
 }
 
 .line {
-  margin: 15px 5px;
+  margin: 15px;
+}
+
+.line [type="text"] , .line [type="email"]{
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(214, 217, 220);
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 7px;
   width: 100%;
 }
 
 textarea {
-  margin-top: 5px;
+  display: block;
   resize: none;
+  width: 100%;
 }
 
 #submit , #clear {
-  margin: 10px 0;
+  margin: 10px 10px 0 0;
   padding: 5px;
+}
+
+#curriculum {
+  margin: 15px 0;
+  width: 100%;
 }
 
 .item-print {
   line-height: 1.5;
-}
-
-#curriculum {
-  width: 100%;
 }
