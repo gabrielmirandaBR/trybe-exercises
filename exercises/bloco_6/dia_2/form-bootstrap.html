@@ -17,69 +17,69 @@
         <p class="lead text-center"><em>Preencha os dados abaixo.</em></p>
       </header>
 
-      <form action="" method="GET" class="row g-1">
-        <fieldset class="row mb-2">
+      <form action="#" method="GET" class="js-form">
+        <fieldset class="form-group">
           <legend class="col-form-label">Dados Pessoais</legend>
           <div class="row mb-3">
             <label class="form-label" for="name">Nome:
-              <input class="form-control" type="text" name="name" id="name" maxlength="40" placeholder="Digite seu nome" required>
+              <input data-validate-field="name" class="form-control" type="text" name="name" id="name" maxlength="40" placeholder="Digite seu nome" required>
             </label>
           </div>
 
           <div class="row mb-3">
             <label class="form-label" for="email">Email:
-              <input class="form-control" type="text" name="email" id="email" maxlength="50" placeholder="Digite seu email" required>
+              <input data-validate-field="email" class="form-control" type="text" name="email" id="email" maxlength="50" placeholder="Digite seu email" required>
             </label>
           </div>
 
           <div class="row mb-3">
             <label class="form-label" for="cpf">CPF:
-              <input class="form-control" type="text" name="cpf" id="cpf" maxlength="11" placeholder="000.000.000-00" required>
+              <input data-validate-field="cpf" class="form-control" type="text" name="cpf" id="cpf" maxlength="11" placeholder="000.000.000-00" required>
             </label>
           </div>
 
           <div class="row mb-3">
             <label class="form-label" for="adress">Endereço:
-              <input class="form-control" type="text" name="adress" id="adress" maxlength="200" placeholder="Digite seu endereço" required>
+              <input data-validate-field="adress" class="form-control" type="text" name="adress" id="adress" maxlength="200" placeholder="Digite seu endereço" required>
             </label>
           </div>
 
           <div class="row mb-3">
             <label class="form-label" for="city">Cidade:
-              <input class="form-control" type="text" name="city" id="city" maxlength="28" placeholder="Digite sua cidade" required>
+              <input data-validate-field="city" class="form-control" type="text" name="city" id="city" maxlength="28" placeholder="Digite sua cidade" required>
             </label>
           </div>
 
           <div class="dropdown">
             <label class="form-label" for="estate">Estado:
-              <select class="form-select" name="estate" id="estate" required></select>
+              <select data-validate-field="estate" class="form-select" name="estate" id="estate" required></select>
             </label>
           </div>
         </fieldset>
 
-        <fieldset class="row mb-2">
+        <fieldset class="form-group">
           <legend class="col-form-label">Dados Profissionais</legend>
           <div class="row mb-3">
             <label class="form-label" for="resume">Resumo Profissional:
-              <textarea class="form-control" name="resume" id="resume"  maxlength="1000" cols="30" rows="10" placeholder="Escreva o seu resumo profissonal com até 1.000 caracteres" required></textarea>
+              <textarea data-validate-field="text" class="form-control" name="resume" id="resume"  maxlength="1000" cols="30" rows="10" placeholder="Escreva o seu resumo profissonal com até 1.000 caracteres" required></textarea>
             </label>
           </div>
 
           <div class="row mb-3">
             <label class="form-label" for="office">Cargo:
-              <input class="form-control" type="text" maxlength="40" id="office" name="office" required>
+              <input data-validate-field="office" class="form-control" type="text" maxlength="40" id="office" name="office" required>
             </label>
           </div>
 
           <div class="row mb-3">
             <label class="form-label" for="description">Descrição do cargo:
-              <input class="form-control" type="text" maxlength="500" id="description" name="description" required>
+              <input data-validate-field="description" class="form-control" type="text" maxlength="500" id="description" name="description" required>
             </label>
           </div>
 
           <div class="row mb-3">
-            <label class="form-label" for="datepicker">Data: 
-              <input class="form-control" type="text" name="date" id="datepicker" required>
+            <label class="form-label" for="date">Data de início: 
+              <input data-validate-field="date" class="form-control" type="text" name="date" id="datepicker" required>
             </label>
           </div>
         </fieldset>
@@ -89,11 +89,12 @@
           <button class="btn btn-outline-danger" type="reset" id="clear">Limpar</button>
         </div>
 
-        <div class="container" id="curriculum">
-        </div>
+        <div class="container" id="curriculum"></div>
       </form>
     </div>
   </body>
+  
+  <script src="/node_modules/just-validate/dist/js/just-validate.min.js"></script>
   <script src="/node_modules/moment/moment.js"></script>
   <script src="/node_modules/pikaday/pikaday.js"></script>
   <script src="script.js"></script>
