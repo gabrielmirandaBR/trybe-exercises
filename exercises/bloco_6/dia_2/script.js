@@ -104,7 +104,7 @@ new JustValidate('.js-form', {
       required: true,
       maxLength: 1000
     },
-    position: {
+    office: {
       required: true,
       maxLength: 40
     },
@@ -113,6 +113,9 @@ new JustValidate('.js-form', {
       maxLength: 500
     },
     date: {
+      required: true,
+    },
+    residence: {
       required: true,
     }
   },
@@ -148,15 +151,18 @@ new JustValidate('.js-form', {
       required: 'Este campo é obrigatório.',
       maxLength: 'O limite é de 1000 caracteres.'
     },
-    position: {
+    office: {
       required: 'Este campo é obrigatório.',
       maxLength: 'O limite é de 40 caracteres.'
     },
-    office: {
+    description: {
       required: 'Este campo é obrigatório.',
       maxLength: 'O limite é de 500 caracteres.'
     },
     date: {
+      required: 'Este campo é obrigatório.',
+    },
+    residence: {
       required: 'Este campo é obrigatório.',
     }
   },
