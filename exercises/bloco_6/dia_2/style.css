@@ -1,0 +1,9 @@
+@import './node_modules/pikaday/css/pikaday.css';
+
+textarea {
+  resize: none;
+}
+
+/* #curriculum {
+  margin: 30px 0;
+} */
