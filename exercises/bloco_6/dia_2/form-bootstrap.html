@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/pikaday/css/pikaday.css">
     <link rel="stylesheet" href="style.css">
     <title>Bloco 5 Dia 1</title>
   </head>
@@ -77,8 +78,8 @@
           </div>
 
           <div class="row mb-3">
-            <label class="form-label" for="date"> Data: 
-              <input class="form-control" type="date" name="date" id="date" required>
+            <label class="form-label" for="datepicker">Data: 
+              <input class="form-control" type="text" name="date" id="datepicker" required>
             </label>
           </div>
         </fieldset>
@@ -92,11 +93,9 @@
         </div>
       </form>
     </div>
-
-  <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
   </body>
-  
+  <script src="/node_modules/moment/moment.js"></script>
+  <script src="/node_modules/pikaday/pikaday.js"></script>
   <script src="script.js"></script>
   
 </html>

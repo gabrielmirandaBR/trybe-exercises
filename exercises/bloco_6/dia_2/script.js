@@ -1,5 +1,5 @@
 const selectEstate = document.getElementById('estate');
-const selectDate = document.getElementById('date').value;
+const selectDate = document.getElementById('datepicker').value;
 const submitButton = document.getElementById('submit');
 const inputAll = document.querySelectorAll('input');
 const curriculumContainer = document.getElementById('curriculum');
@@ -19,37 +19,53 @@ function createEstates () {
 }
 createEstates();
 
-/* document.addEventListener('click', function () {
-  const day = selectDate.substring(0,2);
-  const month = selectDate.substring(3,5);
-  const year = selectDate.substring(6,10);
-  if((day < 31 && day > 0) && (month < 13 && month > 0) && (year > 0 && year.length === 4)) {
-    return true;
-  }
-    return false;
-}); */
-
-
-submitButton.addEventListener('click', function(event) {
-  event.preventDefault();
-  let print;
-  for (let index = 0; index < inputAll.length; index += 1) {
-    if (inputAll.length > 0) {
-      print = document.createElement('div');
-      print.className = 'item-print';
-      print.innerHTML = inputAll[index].value;
-      curriculumContainer.style.border = '1px solid black';
-      curriculumContainer.style.textAlign = 'justify';
-      curriculumContainer.style.padding = '15px';
-      curriculumContainer.appendChild(print); 
+function printCurriculum() {
+  submitButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    let print;
+    for (let index = 0; index < inputAll.length; index += 1) {
+      if (inputAll.length > 0) {
+        print = document.createElement('div');
+        print.className = 'item-print';
+        print.innerHTML = inputAll[index].value;
+        curriculumContainer.style.border = '1px solid black';
+        curriculumContainer.style.textAlign = 'justify';
+        curriculumContainer.style.padding = '15px';
+        curriculumContainer.appendChild(print); 
+      }
     }
-  }
-  print.innerHTML = document.getElementById('estate').value.toUpperCase();
-});
+    print.innerHTML = document.getElementById('estate').value.toUpperCase();
+    print.innerHTML = document.getElementById('datepicker').value;
+  });
+}
+printCurriculum();
 
-clearButton.addEventListener('click', function(event) {
-  event.preventDefault();
-  curriculumContainer.innerHTML = '';
-  curriculumContainer.style.border = 'none';
-  curriculumContainer.style.padding = 'none';
+function clearCurriculum() {
+  clearButton.addEventListener('click', function(event) {
+    curriculumContainer.innerHTML = '';
+    curriculumContainer.style.border = 'none';
+    curriculumContainer.style.padding = 'none';
+  });
+}
+clearCurriculum()
+
+let picker = new Pikaday({
+  field: document.getElementById('datepicker'),
+  format: 'D/M/YYYY',
+  toString(date, format) {
+      // you should do formatting based on the passed format,
+      // but we will just return 'D/M/YYYY' for simplicity
+      const day = date.getDate();
+      const month = date.getMonth() + 1;
+      const year = date.getFullYear();
+      return `${day}/${month}/${year}`;
+  },
+  parse(dateString, format) {
+      // dateString is the result of `toString` method
+      const parts = dateString.split('/');
+      const day = parseInt(parts[0], 10);
+      const month = parseInt(parts[1], 10) - 1;
+      const year = parseInt(parts[2], 10);
+      return new Date(year, month, day);
+  }
 });
