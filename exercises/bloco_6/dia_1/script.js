@@ -29,8 +29,10 @@ createEstates();
     return false;
 }); */
 
+
 submitButton.addEventListener('click', function(event) {
   event.preventDefault();
+  verifyEmail();
   for (let index = 0; index < inputAll.length; index += 1) {
     if(inputAll.length > 0) {
       let print = document.createElement('div');
