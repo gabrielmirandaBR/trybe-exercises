@@ -6,7 +6,7 @@
 <ol>
   <li>HTML & CSS - Forms;</li>
   <li>Bibliotecas JavaScript e Frameworks CSS;</li>
-  <li>Introdução FlexBox;</li>
+  <li>Introdução Flexbox;</li>
   <li>CSS Responsivo.</li>
 </ol>
 
