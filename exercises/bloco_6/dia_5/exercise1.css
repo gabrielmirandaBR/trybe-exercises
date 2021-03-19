@@ -15,20 +15,22 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
+    align-items: center;
+    
   }
   figure {
+    align-items: center;
     display: flex;
     flex-direction: column;
     margin: 0;
-    align-items: center;
+    max-width: 50%;
   }
   img {
-    max-width: 40%;
-
+    max-width: 50%;
   }
   figcaption {
     margin: 20px;
+    font-size: 20px;
   }
 }
 
