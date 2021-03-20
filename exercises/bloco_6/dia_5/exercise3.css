@@ -99,3 +99,27 @@
     float: none;
   }
 }
+
+@media screen and (min-width:420px) {
+  #aside {
+    display: none;
+  }
+  body {
+    margin: 0;
+  }
+  #navigation {
+    padding-top: 75px;
+  }
+  #navigation li a {
+    float: none;
+    width: 100%;
+  }
+  #header {
+    position: fixed;
+    width: 100%;
+  }
+  p, #footer {
+    display: none;
+  }
+
+}
