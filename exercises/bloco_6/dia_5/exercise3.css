@@ -121,5 +121,32 @@
   p, #footer {
     display: none;
   }
+}
 
+@media screen and (min-width:680px) {
+  #aside {
+    display: none;
+  }
+  body {
+    width: 100%;
+    margin: 0;
+  }
+  #navigation {
+    padding-top: 75px;
+  }
+  #navigation li a {
+    float: none;
+  }
+  #header {
+    position: fixed;
+    width: 100%;
+  }
+  p, #footer {
+    display: none;
+  }
+  #content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
