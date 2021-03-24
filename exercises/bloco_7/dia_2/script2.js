@@ -37,6 +37,19 @@ const lesson3 = {
   professor: 'Maria Clara',
   turno: 'noite',
 };
+
 const showKeys = (obj) => Object.keys(obj);
 
 console.log(showKeys(lesson3));
+
+/* 3 - Crie uma função para mostrar o tamanho de um objeto. */
+const lesson3 = {
+  materia: 'Matemática',
+  numeroEstudantes: 10,
+  professor: 'Maria Clara',
+  turno: 'noite',
+};
+
+const objLength = (obj) => Object.keys(obj).length;
+
+console.log(objLength(lesson3));
