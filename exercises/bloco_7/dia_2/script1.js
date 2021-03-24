@@ -52,7 +52,7 @@ const orderModifier = (order) => {
   const name = order.name = 'Luiz Silva';
   const pizzaMuzzarela = order.order.pizza = 'muzzarela';
   const pizzaCalabresa = order.order.pizza = 'calabresa';
-  const drink = order.order.drinks = 'Coca-Cola Zero';
+  const drink = order.order.drinks.coke.type;
   const paymentTotal = order.payment = 'R$ 50,00';
 
   console.log(`Olá ${name}, o total do seu pedido de ${pizzaMuzzarela}, ${pizzaCalabresa} e ${drink} é ${paymentTotal}.`)
@@ -60,4 +60,3 @@ const orderModifier = (order) => {
 }
 
 orderModifier(order);
-
