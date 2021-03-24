@@ -53,3 +53,74 @@ const lesson3 = {
 const objLength = (obj) => Object.keys(obj).length;
 
 console.log(objLength(lesson3));
+
+/* 4 - Crie uma função para listar os valores de um objeto. Essa função deve receber um objeto como parâmetro. */
+const lesson3 = {
+  materia: 'Matemática',
+  numeroEstudantes: 10,
+  professor: 'Maria Clara',
+  turno: 'noite',
+};
+
+const showValues = (obj) => Object.values(obj);
+
+console.log(showValues(lesson3));
+
+/* 5 - Crie um objeto de nome allLessons , que deve agrupar todas as aulas através do Object.assign . Cada chave desse novo objeto será uma aula, sendo essas chaves: lesson1 , lesson2 e lesson3 . Ao executar o comando console.log(allLessons) , a saída deverá ser a seguinte: */
+const lesson1 = {
+  materia: 'Matemática',
+  numeroEstudantes: 20,
+  professor: 'Maria Clara',
+  turno: 'manhã',
+};
+
+const lesson2 = {
+  materia: 'História',
+  numeroEstudantes: 20,
+  professor: 'Carlos',
+};
+
+const lesson3 = {
+  materia: 'Matemática',
+  numeroEstudantes: 10,
+  professor: 'Maria Clara',
+  turno: 'noite',
+};
+
+const mergeObjs = (obj1, obj2, obj3) => {
+ const allLessons = Object.assign({}, {obj1, obj2, obj3});
+ return allLessons;
+};
+
+console.log(mergeObjs(lesson1, lesson2, lesson3));
+
+/* 6 - Usando o objeto criado no exercício 5, crie uma função que retorne o número total de estudantes em todas as aulas.*/
+const lesson1 = {
+  materia: 'Matemática',
+  numeroEstudantes: 20,
+  professor: 'Maria Clara',
+  turno: 'manhã',
+};
+
+const lesson2 = {
+  materia: 'História',
+  numeroEstudantes: 20,
+  professor: 'Carlos',
+};
+
+const lesson3 = {
+  materia: 'Matemática',
+  numeroEstudantes: 10,
+  professor: 'Maria Clara',
+  turno: 'noite',
+};
+
+const totalStudents = (obj1, obj2, obj3) => {
+  const totalStudents1 = obj1.numeroEstudantes;
+  const totalStudents2 = obj2.numeroEstudantes;
+  const totalStudents3 = obj3.numeroEstudantes;
+  return totalStudents1 + totalStudents2 + totalStudents3;
+};
+console.log(totalStudents(lesson1, lesson2, lesson3));
+
+// 7 Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto. Por exemplo:
