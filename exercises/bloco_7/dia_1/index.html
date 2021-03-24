@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloco 7 Dia 1 - Exercicio 3</title>
+  </head>
+  <body>
+
+    <style>
+      button {
+        padding: 50px;
+      }
+      span {
+        font-size: 16px;
+      }
+    </style>
+
+    <button></button>
+    <span></span>
+    
+  </body>
+
+  <script>
+    const btn = document.getElementsByTagName('button')[0];
+    const span = document.getElementsByTagName('span')[0];
+    let clickCount = 0;
+
+    btn.addEventListener('click', () => {
+      span.innerHTML = clickCount += 1;
+    })
+
+  </script>
+
+</html>
