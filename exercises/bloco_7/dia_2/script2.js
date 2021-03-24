@@ -172,6 +172,8 @@ const lesson3 = {
   turno: 'noite',
 };
 
+console.log(Object.values(lesson3))
+
 const verifyPairs = (obj, key, value) => {
   let entry = Object.entries(obj);
   let verify = false;
@@ -218,3 +220,45 @@ const countStudentsMath = (obj) => {
   return count;
 };
 console.log(countStudentsMath(allLessons));
+
+// 2 -Crie uma função que deverá retornar um objeto que representa o relatório do professor ou professora, as aulas que ele ou ela ministrou e o número total de estudantes. Use o objeto criado no exercício 5
+const allLessons = {
+  obj1: {
+    materia: 'Matemática',
+    numeroEstudantes: 20,
+    professor: 'Maria Clara',
+    turno: 'manhã'
+  },
+  obj2: { 
+    materia: 'História', 
+    numeroEstudantes: 20, 
+    professor: 'Carlos' 
+  },
+  obj3: {
+    materia: 'Matemática',
+    numeroEstudantes: 10,
+    professor: 'Maria Clara',
+    turno: 'noite'
+  }
+}
+
+const createInfo = (obj, name) => {
+  let count = 0;
+  let subjects = [];
+  const objValues = Object.values(obj);
+  for (index in objValues) {
+    if (objValues[index].professor === name) {
+      subjects.push(objValues[index].materia);
+      count += objValues[index].numeroEstudantes;
+    }
+  }
+  return {materias:subjects, 'total de estudantes': count};
+};
+
+const createReport = (allLessons, name) => {
+  const newReport = {};
+  newReport.professor = name;
+  Object.assign(newReport, createInfo(allLessons, name));
+  return newReport;
+}
+console.log(createReport(allLessons, 'Maria Clara'));
