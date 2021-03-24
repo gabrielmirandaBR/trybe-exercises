@@ -123,4 +123,31 @@ const totalStudents = (obj1, obj2, obj3) => {
 };
 console.log(totalStudents(lesson1, lesson2, lesson3));
 
-// 7 Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto. Por exemplo:
+// 7 Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto
+const lesson1 = {
+  materia: 'Matemática',
+  numeroEstudantes: 20,
+  professor: 'Maria Clara',
+  turno: 'manhã',
+};
+
+const lesson2 = {
+  materia: 'História',
+  numeroEstudantes: 20,
+  professor: 'Carlos',
+};
+
+const lesson3 = {
+  materia: 'Matemática',
+  numeroEstudantes: 10,
+  professor: 'Maria Clara',
+  turno: 'noite',
+};
+
+const keyValue = (obj, key) => {
+  let values = Object.values(obj);
+  let valueKey = values[key];
+  return valueKey;
+};
+console.log(keyValue(lesson1, 1))
+
