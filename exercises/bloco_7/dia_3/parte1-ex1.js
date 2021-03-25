@@ -21,7 +21,7 @@ assert.strictEqual(sum(4,5), 9, 'Erro: os números não são estritamente iguais
 assert.strictEqual(sum(0,0), 0, 'Erro: os números não são estritamente iguais');
 
 assert.throws = (() => {
-  sum(4,'5');
+  sum(4, '5');
 });
 
 assert.throws = (() => {
