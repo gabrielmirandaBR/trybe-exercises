@@ -66,7 +66,7 @@ const showValues = (obj) => Object.values(obj);
 
 console.log(showValues(lesson3));
 
-/* 5 - Crie um objeto de nome allLessons , que deve agrupar todas as aulas através do Object.assign . Cada chave desse novo objeto será uma aula, sendo essas chaves: lesson1 , lesson2 e lesson3 . Ao executar o comando console.log(allLessons) , a saída deverá ser a seguinte: */
+/* 5 - Crie um objeto de nome allLessons , que deve agrupar todas as aulas através do Object.assign . Cada chave desse novo objeto será uma aula, sendo essas chaves: lesson1 , lesson2 e lesson3. */
 const lesson1 = {
   materia: 'Matemática',
   numeroEstudantes: 20,
@@ -95,33 +95,36 @@ const mergeObjs = (obj1, obj2, obj3) => {
 console.log(mergeObjs(lesson1, lesson2, lesson3));
 
 /* 6 - Usando o objeto criado no exercício 5, crie uma função que retorne o número total de estudantes em todas as aulas.*/
-const lesson1 = {
-  materia: 'Matemática',
-  numeroEstudantes: 20,
-  professor: 'Maria Clara',
-  turno: 'manhã',
+const allLessons = {
+  obj1: {
+    materia: 'Matemática',
+    numeroEstudantes: 20,
+    professor: 'Maria Clara',
+    turno: 'manhã'
+  },
+  obj2: { 
+    materia: 'História', 
+    numeroEstudantes: 20, 
+    professor: 'Carlos' 
+  },
+  obj3: {
+    materia: 'Matemática',
+    numeroEstudantes: 10,
+    professor: 'Maria Clara',
+    turno: 'noite'
+  }
 };
 
-const lesson2 = {
-  materia: 'História',
-  numeroEstudantes: 20,
-  professor: 'Carlos',
-};
+const totalStudents = (obj) => {
+  let total = 0;
+  const arrayKeys = Object.keys(obj);
 
-const lesson3 = {
-  materia: 'Matemática',
-  numeroEstudantes: 10,
-  professor: 'Maria Clara',
-  turno: 'noite',
+  for (index in arrayKeys) {
+    total += obj[arrayKeys[index]].numeroEstudantes;
+  }
+  return total;
 };
-
-const totalStudents = (obj1, obj2, obj3) => {
-  const totalStudents1 = obj1.numeroEstudantes;
-  const totalStudents2 = obj2.numeroEstudantes;
-  const totalStudents3 = obj3.numeroEstudantes;
-  return totalStudents1 + totalStudents2 + totalStudents3;
-};
-console.log(totalStudents(lesson1, lesson2, lesson3));
+console.log(totalStudents(allLessons));
 
 // 7 Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto
 const lesson1 = {
