@@ -35,5 +35,5 @@ const showHabilities = (obj) => {
     console.log(`${skills[value]}, Nível: ${obj[skills[value]]}`);
   }
 };
-showHabilities(student2);
 showHabilities(student1);
+showHabilities(student2);
