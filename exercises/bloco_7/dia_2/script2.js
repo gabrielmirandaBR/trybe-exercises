@@ -255,13 +255,13 @@ const createInfo = (obj, name) => {
       count += objValues[index].numeroEstudantes;
     }
   }
-  return {materias:subjects, 'total de estudantes': count};
+  return {materias: subjects, 'total de estudantes': count};
 };
 
-const createReport = (allLessons, name) => {
+const createReport = (obj, name) => {
   const newReport = {};
   newReport.professor = name;
-  Object.assign(newReport, createInfo(allLessons, name));
+  Object.assign(newReport, createInfo(obj, name));
   return newReport;
 }
 console.log(createReport(allLessons, 'Maria Clara'));
