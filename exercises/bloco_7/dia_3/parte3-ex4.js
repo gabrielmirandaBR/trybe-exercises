@@ -26,5 +26,3 @@ assert.throws(() => {
 });
 
 assert.deepStrictEqual(secondThirdSmallest(parameter), result);
-
-
