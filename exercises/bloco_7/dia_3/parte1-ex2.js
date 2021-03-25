@@ -23,6 +23,7 @@ assert.deepStrictEqual(myRemove([1, 2, 3, 4], 3), [1,2,4], 'Erro: a função nã
 assert.notDeepStrictEqual(myRemove([1, 2, 3, 4], 3), [1,2,3,4], 'Erro: a função retorna o array esperado')
 
 const array = [1,2,3]
-assert.deepStrictEqual(array, [1,2,3], 'Erro: o array sofreu alteração')
+myRemove(array, 4)
+assert.deepStrictEqual([1,2,3], array, 'Erro: o array sofreu alteração')
 
 assert.deepStrictEqual(myRemove([1, 2, 3, 4], 5), [1,2,3,4], 'Erro: a função não retorna o array esperado')
