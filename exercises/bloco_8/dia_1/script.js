@@ -11,9 +11,9 @@ const functionFirstClass3 = () => {
 }
 
 const doingThings = (function1) => {
-  function1;
+  function1();
 }
 
-doingThings(functionFirstClass());
-doingThings(functionFirstClass2());
-doingThings(functionFirstClass3());
+doingThings(functionFirstClass);
+doingThings(functionFirstClass2);
+doingThings(functionFirstClass3);
