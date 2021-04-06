@@ -63,19 +63,17 @@ const books = [
   },
 ];
 
-const expectedResult = [
-  'Frank Herbert',
-  'George R. R. Martin',
-  'Isaac Asimov',
-  'J. R. R. Tolkien',
-];
-// Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de ficção científica ou fantasia.
+const expectedResult = 'O Senhor dos Anéis';
 
-function fantasyOrScienceFictionAuthors() {
-  return books
-  .filter(book => (book.genre === 'Fantasia' || book.genre === 'Ficção Científica'))
-  .map(book => book.author.name)
-  .sort();
+// Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais. Dica: cada inicial termina com um ponto.
+
+
+function authorWith3DotsOnName() {
+  return books.find (book => {
+    return book.author.name
+    .split(' ')
+    .filter(value => value.endsWith('.')).length === 3})
+    .name
 }
 
-assert.deepStrictEqual(fantasyOrScienceFictionAuthors(), expectedResult);
+assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
