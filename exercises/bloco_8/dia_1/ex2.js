@@ -6,11 +6,8 @@ const checkNumber = (num, randomNumber) => {
 
 const result = (num, checkNumber) => {
   const randomNumber = Math.ceil(Math.random()*5);
-  if (checkNumber(num, randomNumber)) {
-    return 'Lucky day, you won!';
-  } else {
-    return 'Try Again!'
-  }
+
+  return checkNumber(num, randomNumber) ? 'Lucky day, you won!' : 'Try Again!';
 }
 
 console.log(result(2,checkNumber));
