@@ -91,7 +91,7 @@ const expectedResult = [
 
 function oldBooks() {
   return books
-  .filter((book) => book.releaseYear <= 1960)
+  .filter(book => book.releaseYear <= 1960)
   .sort((a,b) => a.releaseYear - b.releaseYear);
 }
 

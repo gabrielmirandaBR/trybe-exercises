@@ -109,7 +109,7 @@ const expectedResult = [
 // Crie um array com todos os objetos que possuem gênero ficção científica ou fantasia.
 
 function fantasyOrScienceFiction() {
-  return books.filter((book) => 
+  return books.filter(book => 
     (book.genre === 'Fantasia' || book.genre === 'Ficção Científica')
   )};
 

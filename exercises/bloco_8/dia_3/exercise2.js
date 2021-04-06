@@ -94,7 +94,7 @@ const expectedResult = [
 
 function nameAndAge() {
 
-  return books.map((book) => (
+  return books.map(book => (
     {
       age: book.releaseYear - book.author.birthYear,
       author: book.author.name
