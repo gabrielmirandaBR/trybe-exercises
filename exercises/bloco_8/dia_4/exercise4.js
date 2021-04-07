@@ -80,6 +80,4 @@ function longestNamedBook() {
   });
 }
 
-console.log(longestNamedBook())
-
-//assert.deepStrictEqual(longestNamedBook(), expectedResult);
+assert.deepStrictEqual(longestNamedBook(), expectedResult);
