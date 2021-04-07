@@ -9,7 +9,17 @@ const names = [
 // Dada o array de nomes, retorne a quantidade de vezes em que aparecem a letra a maiúscula ou minúscula.
 
 function containsA() {
-  // escreva seu código aqui
-}
+  const concatNames =  names.reduce((acumulator, currentValue) => {
 
-assert.deepStrictEqual(containsA(), 20);
+    return acumulator + currentValue
+  });
+  
+  return concatNames.split('').reduce((acumulator, currentValue) => {
+    (currentValue === 'A' || currentValue === 'a') ? acumulator += 1 : false;
+
+    return acumulator;
+  }, 0)
+}
+console.log(containsA())
+
+//assert.deepStrictEqual(containsA(), 20);
