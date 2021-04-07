@@ -20,6 +20,5 @@ function containsA() {
     return acumulator;
   }, 0)
 }
-console.log(containsA())
 
-//assert.deepStrictEqual(containsA(), 20);
+assert.deepStrictEqual(containsA(), 20);
