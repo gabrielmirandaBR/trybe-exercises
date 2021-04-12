@@ -17,6 +17,7 @@ const myIncome = 1000;
 
 const handleExpenses = (myExpenses) => {
   const eachValue = myExpenses.map((item) => Object.values(item)[0]);
+  console.log(eachValue);
   const totalExpense = eachValue.reduce((acc, curr) => acc + curr, 0);
   return totalExpense;
 };
