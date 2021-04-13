@@ -4,7 +4,7 @@ const promise = new Promise((resolve, reject) => {
   for (let index = 0; numbers.length < 10; index += 1) {
   numbers.push(Math.floor(Math.random() * 50));
   }
-
+  
   const numbers2 = numbers.map((number) => number ** 2);
 
   const sumNumbers = numbers2.reduce((acumulator, currentValue) => acumulator + currentValue);
@@ -16,5 +16,6 @@ const promise = new Promise((resolve, reject) => {
   resolve(sumNumbers);
 });
 promise
-.then((number) => console.log(`${number} - Promise resolvida`))
-.catch((number) => console.log(`${number} -Promise Inválida`));
+.then((sumNumber) => console.log([2, 3, 5, 10].map((number) => Math.floor(sumNumber / number))))
+
+.catch((number) => console.log(`${number} - Promise Inválida`));
