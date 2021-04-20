@@ -12,6 +12,6 @@ describe('Teste Exercício 2', () => {
 
   it('Retorna a mesma mensagem de erro caso nao haja o id', () => getUserName(6).catch((error) => {
     expect.assertions(1);
-    expect(error).toEqual({ error: `User with ${6} not found.` });
+    expect(error).toStrictEqual({ error: `User with ${6} not found.` });
   }));
 });
