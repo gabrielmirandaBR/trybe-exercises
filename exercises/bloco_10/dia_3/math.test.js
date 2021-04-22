@@ -9,4 +9,12 @@ describe('Testes dos exercícios para Fixação', () => {
 
     expect(subtrair).toHaveBeenCalled();
   });
+
+  test('checa a chamada e o retorno da função multiplicar', () => {
+    multiplicar.mockImplementation((a, b) => a * b);
+    multiplicar(5, 2);
+
+    expect(multiplicar).toHaveBeenCalled();
+    expect(multiplicar(5, 2)).toBe(10);
+  });
 });
