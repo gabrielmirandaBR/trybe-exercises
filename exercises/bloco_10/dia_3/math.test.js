@@ -47,4 +47,17 @@ describe('Testes dos exercícios para Fixação', () => {
 
     expect(dividir).toHaveBeenCalledTimes(1);
   });
+
+  test('checa a função subtrair', () => {
+    subtrair.mockClear();
+    subtrair();
+    expect(subtrair).toHaveBeenCalledTimes(1);
+
+    subtrair.mockReturnValue(20);
+    expect(subtrair()).toBe(20);
+   
+    subtrair.mockReset();
+    subtrair.mockReturnValue(2);
+    expect(subtrair()).toBe(2);
+  });
 });
