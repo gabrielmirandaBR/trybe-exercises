@@ -16,7 +16,7 @@ describe('Teste Exercício Bônus', () => {
     asyncFetch();
     expect(asyncFetch).toHaveBeenCalledTimes(1);
     
-    return fetchJoke().then((joke) => {
+    return asyncFetch().then((joke) => {
       expect(joke).toBe('Whiteboards ... are remarkable.');
     });
   });
