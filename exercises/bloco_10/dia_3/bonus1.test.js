@@ -1,23 +1,20 @@
 const { fetchJoke } = require('./bonus1');
 
-const returnfetch = ({
+jest.mock('./bonus1', () => ({
+  fetchJoke: jest.fn().mockResolvedValue({
     id: '7h3oGtrOfxc',
     joke: 'Whiteboards ... are remarkable.',
     status: 200,
-  });
-
-jest.mock('./bonus1', () => ({
-  fetchJoke: jest.fn(),
+  }),
 }));
 
 describe('Teste Exercício Bônus', () => {
-  test('checa o retorno da função fetchJoke', async () => {
-    const asyncFetch = fetchJoke.mockResolvedValue(returnfetch.joke);
-    asyncFetch();
-    expect(asyncFetch).toHaveBeenCalledTimes(1);
+  test('checa o retorno da função fetchJoke', () => {
+    fetchJoke();
+    expect(fetchJoke).toHaveBeenCalledTimes(1);
     
-    return asyncFetch().then((joke) => {
-      expect(joke).toBe('Whiteboards ... are remarkable.');
+    return fetchJoke().then((data) => {
+      expect(data.joke).toBe('Whiteboards ... are remarkable.');
     });
   });
 });
