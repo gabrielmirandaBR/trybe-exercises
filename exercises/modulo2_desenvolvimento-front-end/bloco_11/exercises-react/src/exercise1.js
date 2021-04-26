@@ -13,7 +13,4 @@ class Exercise1 extends Component {
   }
 }
 
-
-
-
 export default Exercise1;
