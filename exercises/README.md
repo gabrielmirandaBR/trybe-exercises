@@ -1,9 +1,6 @@
+## Objetivo
 
-### Conteúdo:
-<br>
 <ul>
- <li>Bloco 2: Git, GitHub e Internet;</li>
- <li>Bloco 3: Introdução à HTML e CSS;</li>
- <li>Bloco 4: Introdução à JavaScript e Lógica de Programação.</li>
+  <li>Módulo 1: Fundamentos do Desenvolvimento Web;</li>
+  <li>Módulo 2: Desenvolvimento Front-end.</li>
 </ul>
- 
