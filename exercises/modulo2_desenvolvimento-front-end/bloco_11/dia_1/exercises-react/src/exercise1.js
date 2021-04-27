@@ -2,15 +2,10 @@ import React, {Component} from 'react';
 
 const tasks = ['acordar', 'tomar água' , 'almoçar' , 'jantar'];
 
-const task = () => {
-  return (
-    <ol>{tasks.map((task) => <li>{task}</li>)}</ol>);
-}
-
-class Exercise1 extends Component {
+class Task extends Component {
   render() {
-   return task();
+   return <ol>{tasks.map((task) => <li>{task}</li>)}</ol>;
   }
 }
 
-export default Exercise1;
+export default Task;
