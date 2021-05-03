@@ -9,8 +9,8 @@ import Estado from './components/Estado';
 import Moradia from './components/Moradia';
 import Resumo from './components/Resumo';
 import Descricao from './components/Descricao';
-import MontaCurriculo from './components/MontaCurriculo'
-import LimpaCurriculo from './components/LimpaCurriculo'
+import MontaCurriculo from './components/MontaCurriculo';
+import LimpaCurriculo from './components/LimpaCurriculo';
 
 class App extends Component {
   constructor() {
@@ -76,6 +76,22 @@ class App extends Component {
     this.setState({
       montaCurriculo: true,
     });
+    
+    if (this.state.montaCurriculo === 'false') {
+      const sectionCurriculo = document.querySelector('.curriculo');
+      const stateValues = Object.values(this.state);
+      const stateKeys = Object.keys(this.state);
+
+      const title = document.createElement('h2');
+      title.innerHTML = 'Dados do Currículo';
+      sectionCurriculo.appendChild(title);
+      
+      stateValues.forEach((value, index) => {
+        const p = document.createElement('p');
+        p.innerHTML = `${stateKeys[index]}: ${value}`;
+        sectionCurriculo.appendChild(p);
+      });
+    }
   }
 
   handleClickErase(event) {
@@ -93,33 +109,39 @@ class App extends Component {
       descricaoAlert: 'false',
       montaCurriculo: 'false',
     });
+
+    document.querySelector('.curriculo').innerHTML = '';
   }
   
   render() {
     return (
-      <form className="App">
-        <fieldset className="personal-contents">
-          <h2>Dados Iniciais</h2>
-          <Nome value={ this.state.name } handleChange={ this.handleChange }/>
-          <Email value={ this.state.email } handleChange={ this.handleChange }/>
-          <CPF value={ this.state.cpf } handleChange={ this.handleChange }/>
-          <Endereco value={ this.state.endereco } handleChange={ this.handleChange }/>
-          <Cidade value={ this.state.cidade } handleChange={ this.handleChange } handleBlur={ this.handleBlur }/>
-          <Estado value={ this.state.estado } handleChange={ this.handleChange } />
-          <Moradia check={ this.state.moradia } handleChange={ this.handleChange }/>
-        </fieldset>
+      <main>
+        <form className="App">
+          <fieldset className="personal-contents">
+            <h2>Dados Iniciais</h2>
+            <Nome value={ this.state.name } handleChange={ this.handleChange }/>
+            <Email value={ this.state.email } handleChange={ this.handleChange }/>
+            <CPF value={ this.state.cpf } handleChange={ this.handleChange }/>
+            <Endereco value={ this.state.endereco } handleChange={ this.handleChange }/>
+            <Cidade value={ this.state.cidade } handleChange={ this.handleChange } handleBlur={ this.handleBlur }/>
+            <Estado value={ this.state.estado } handleChange={ this.handleChange }/>
+            <Moradia check={ this.state.moradia } handleChange={ this.handleChange }/>
+          </fieldset>
+        </form>
 
-        <fieldset className="professional-contents">
-          <h2>Dados profissionais</h2>
-          <Resumo value={ this.state.resumoCurriculo } handleChange={ this.handleChange }/>
-          <Descricao value={ this.state.descricaoCargo } alert={ this.state.descricaoAlert } handleChange={ this.handleChange } handleMouseEnter={ this.handleMouseEnter }/>
-        </fieldset>
+          <fieldset className="professional-contents">
+            <h2>Dados profissionais</h2>
+            <Resumo value={ this.state.resumoCurriculo } handleChange={ this.handleChange }/>
+            <Descricao value={ this.state.descricaoCargo } alert={ this.state.descricaoAlert } handleChange={ this.handleChange } handleMouseEnter={ this.handleMouseEnter }/>
+          </fieldset>
 
         <section className="btn-section">
-          <MontaCurriculo handleClickCreate={ this.handleClickCreate } />
-          <LimpaCurriculo handleClickErase={ this.handleClickErase } checkClick={ this.state.montaCurriculo }/>
+          <MontaCurriculo handleClickCreate={ this.handleClickCreate }/>
+          <LimpaCurriculo handleClickErase={ this.handleClickErase }/>
         </section>
-      </form>
+
+        <section className='curriculo'></section>
+      </main>
     );
   }
 }
