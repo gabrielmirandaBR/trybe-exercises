@@ -4,9 +4,7 @@ class MontaCurriculo extends Component {
 
   
   render() {
-    const { handleClickCreate, checkClick } = this.props;
-    console.log(checkClick)
-    
+    const { handleClickCreate } = this.props;
 
     return(
       <div>
