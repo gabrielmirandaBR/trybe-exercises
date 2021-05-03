@@ -10,7 +10,7 @@ class ResideNoEstado extends Component {
         name="resideNoEstado"
         type="checkbox" 
         check={ check }
-        onChange={handleChange}
+        onChange={ handleChange }
       />
     </label>
    );

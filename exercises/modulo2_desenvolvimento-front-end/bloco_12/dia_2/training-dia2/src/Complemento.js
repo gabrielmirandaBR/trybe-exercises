@@ -15,7 +15,7 @@ class Complemento extends Component {
         <textarea
           name="complemento"
           value={ value } 
-          onChange={handleChange}
+          onChange={ handleChange }
         />
       <span>{error ? error : ''}</span>
       </label>

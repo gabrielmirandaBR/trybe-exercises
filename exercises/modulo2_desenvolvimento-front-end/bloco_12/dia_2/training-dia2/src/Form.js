@@ -31,10 +31,10 @@ class Form extends Component {
     return (
       <form>
         <fieldset>
-          <EstadoOrigem value={this.state.estadoOrigem} handleChange={this.handleChange} />
-          <ResideNoEstado check={this.state.resideNoEstado} handleChange={this.handleChange}/>
-          <Idade value={this.state.idade} handleChange={this.handleChange}/>
-          <Complemento value={this.state.complemento} handleChange={this.handleChange}/>
+          <EstadoOrigem value={ this.state.estadoOrigem } handleChange={ this.handleChange } />
+          <ResideNoEstado check={ this.state.resideNoEstado } handleChange={ this.handleChange }/>
+          <Idade value={ this.state.idade } handleChange={ this.handleChange }/>
+          <Complemento value={ this.state.complemento } handleChange={ this.handleChange }/>
           <File />
         </fieldset>
       </form>
