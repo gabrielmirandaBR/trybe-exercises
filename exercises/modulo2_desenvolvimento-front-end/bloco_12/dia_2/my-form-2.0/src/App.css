@@ -1,0 +1,20 @@
+body{
+  width: 80%;
+  margin: 15px auto;
+}
+.personal-contents, .professional-contents {
+  padding: 15px;
+}
+
+.personal-contents div {
+  margin: 5px;
+}
+
+.personal-contents span {
+  margin-right: 5px;
+}
+
+.btn-section{
+  display: flex;
+  margin: 10px 0;
+}
