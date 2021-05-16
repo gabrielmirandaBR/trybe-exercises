@@ -1,0 +1,33 @@
+header {
+  text-align: center;
+}
+
+.images-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.images-container img {
+  margin: 2px;
+  border: 2px solid black;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.btn-container button {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: seagreen;
+  font-size: 14px;
+}
+
+.btn-container button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
