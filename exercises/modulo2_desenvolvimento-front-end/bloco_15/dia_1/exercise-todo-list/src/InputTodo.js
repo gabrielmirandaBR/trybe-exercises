@@ -33,6 +33,7 @@ class InputTodo extends Component {
           onChange={(e) => this.changeTextTodo(e.target.value)}
         />
         <input id="btnAdd" type="button" value="Adicionar" onClick={() => this.addItem(textTodo,addTodo)} />
+        <input data-testid="id-remove" type="button" value="Remover" disabled />
       </div>
     );
   }
