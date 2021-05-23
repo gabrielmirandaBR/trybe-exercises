@@ -5,7 +5,7 @@
 <br><br>
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/gabrielmirandaBR/trybe-exercises/master)
 
-### Este diretório tem o objetivo de armazenar as atividades e projetos realizados na Trybe.
+### Este diretório tem o objetivo de armazenar as atividades realizadas na Trybe.
 
 ![logo](https://user-images.githubusercontent.com/63875350/107122838-f7577400-6878-11eb-9afa-add52bfc916e.png)
 
