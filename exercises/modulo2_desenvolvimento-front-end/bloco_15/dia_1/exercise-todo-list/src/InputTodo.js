@@ -6,9 +6,12 @@ class InputTodo extends Component {
     super(props)
     this.state = {
       textTodo: '',
+      task: '',
     };
 
     this.changeTextTodo = this.changeTextTodo.bind(this);
+    /* this.removeItem = this.removeItem.bind(this); */
+
   }
 
   changeTextTodo(value) {
@@ -20,8 +23,13 @@ class InputTodo extends Component {
     callback(value)
   }
 
+/*   removeItem(event,callback) {
+    event.target.disable;
+    callback()
+  } */
+
   render() {
-    const { addTodo } = this.props;
+    const { addTodo, selectTask, removeTodo } = this.props;
     const { textTodo } = this.state;
     return (
       <div className="InputTodo">
@@ -33,7 +41,7 @@ class InputTodo extends Component {
           onChange={(e) => this.changeTextTodo(e.target.value)}
         />
         <input id="btnAdd" type="button" value="Adicionar" onClick={() => this.addItem(textTodo,addTodo)} />
-        <input data-testid="id-remove" type="button" value="Remover" disabled />
+        <input data-testid="id-remove" type="button" value="Remover" onClick={() => removeTodo()} disabled={!selectTask} />
       </div>
     );
   }

@@ -16,10 +16,12 @@ describe('Testando funcionalidade de apagar item selecionado', () => {
     const inputTask = getByLabelText('Tarefa:');
     const btnAdd = getByText('Adicionar');
     const btnRemove = getByText('Remover');
-    fireEvent.change(inputTask, { target: { value: 'Exercitar' } })
+
+    fireEvent.change(inputTask, { target: { value: 'Exercitar' } });
     fireEvent.click(btnAdd);
-    fireEvent.change(inputTask, { target: { value: 'Estudar' } })
+    fireEvent.change(inputTask, { target: { value: 'Estudar' } });
     fireEvent.click(btnAdd);
+    
     const selectTask = getByText('Exercitar');
     expect(selectTask).toBeInTheDocument();
     fireEvent.click(selectTask);
