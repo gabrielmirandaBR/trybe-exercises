@@ -1,0 +1,21 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import './Digimon.css'
+
+const Digimon = ({ digimons }) => (
+  digimons.map((digimon)=> 
+    <div className='digimon-card' key={digimon.name}>
+      <h2 data-testid="digimonName">{digimon.name}</h2>
+      <p data-testid="digimonLevel">level: {digimon.level}</p>
+      <img src={digimon.img} alt={digimon.name} />
+    </div>
+  )
+);
+
+export default Digimon;
+
+Digimon.prototype = PropTypes.shape({
+  name: PropTypes.string,
+  level: PropTypes.string,
+  img: PropTypes.string,
+}).isRequired;

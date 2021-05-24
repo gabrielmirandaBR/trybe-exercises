@@ -1,0 +1,9 @@
+.digimon-card {
+  border: 1px solid white;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+.digimon-card img {
+  width: 170px;
+}

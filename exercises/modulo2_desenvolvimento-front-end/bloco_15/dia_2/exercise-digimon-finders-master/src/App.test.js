@@ -63,36 +63,32 @@ describe('Teste da aplicação toda', () => {
   });
 
   it('Exibe mensagem de erro ao pesquisar por um digimon inexistente', async () => {
-    const msgError = 'Teste is not a Digimon in our database.';
+    const ErrorMsg = 'A is not a Digimon in our database.';
 
     const fetchAPI = global.fetch = jest.fn().mockResolvedValue({
-      json: jest.fn().mockResolvedValue('Teste is not a Digimon in our database.'),
+      json: jest.fn().mockResolvedValue({ErrorMsg})
+    });
+    
+      const { getByRole, findByText } = render(<App />);
+
+      const input = getByRole('textbox');
+      expect(input).toHaveValue('');
+
+      fireEvent.change(input, { target: { value: 'Teste' } });
+      expect(input).toHaveValue('Teste');
+
+      const button = getByRole('button');
+      expect(button).toBeInTheDocument();
+      fireEvent.click(button);
+
+      await findByText('A is not a Digimon in our database.');
+
+      expect(fetchAPI).toBeCalledTimes(1);
+      expect(fetchAPI).toBeCalledWith(
+        'https://digimon-api.vercel.app/api/digimon/name/Teste'
+      );
     });
 
-
-    const {getByRole, findByRole} = render(<App />);
-
-    const input = getByRole('textbox');
-    expect(input).toBeInTheDocument();
-    expect(input).toHaveValue('');
-
-    fireEvent.change(input, { target: { value: 'Teste'} } );
-    expect(input).toHaveValue('Teste');
-
-    const btnSearch = getByRole('button');
-    expect(btnSearch).toBeInTheDocument();
-    fireEvent.click(btnSearch);
-
-/*     await findByRole('heading', {
-      level:1,
-      name: /Teste is not a Digimon in our database./i
-    }); */
-    
-    expect(fetchAPI).toBeCalledTimes(1);
-    expect(fetchAPI).toBeCalledWith(
-      'https://digimon-api.vercel.app/api/digimon/name/Teste'
-    );
-  });
 
   it('Caso não haja valor no input nenhum fetch é chamado', () => {
     const {getByRole} = render(<App />);
