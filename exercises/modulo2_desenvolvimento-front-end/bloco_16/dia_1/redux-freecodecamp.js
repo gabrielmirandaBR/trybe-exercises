@@ -36,7 +36,6 @@ store.dispatch(loginAction());
 
 
 // Criando um Reducer para receber e manipular uma action
-
 const defaultState = {
   login: false
 };
