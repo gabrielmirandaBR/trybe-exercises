@@ -3,7 +3,7 @@
 <ul>
   <li>Filtrar resultados de consultas com o WHERE;</li>
 
-  <li>Utilizar operadores booleanos e relacionais em consultas;<li>
+  <li>Utilizar operadores booleanos e relacionais em consultas;</li>
 
   <li>Criar consultas mais dinâmicas e maleáveis com LIKE;</li>
 
