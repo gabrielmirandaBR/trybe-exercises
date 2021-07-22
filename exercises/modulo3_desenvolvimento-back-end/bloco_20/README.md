@@ -2,7 +2,7 @@
 
 <p>Este bloco visa aprender sobre SQL.</p>
 
-<p>Bloco dividido em quatro partes:</p>
+<p>Bloco dividido em partes:</p>
 <ol>
   <li>Introdução - Back-end;</li>
   <li>Introdução - Banco de Dados;</li>
