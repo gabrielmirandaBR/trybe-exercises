@@ -13,7 +13,3 @@
 
   <li>Exibir e filtrar dados de forma agrupada com GROUP BY e HAVING.</li>
 </ul>
-
-
-
-
