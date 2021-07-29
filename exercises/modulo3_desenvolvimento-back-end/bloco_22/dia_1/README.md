@@ -1,7 +1,7 @@
 ## Objetivo:
 
 <ul>
-  <li>Modelar um banco de dados;;</li>
+  <li>Modelar um banco de dados;</li>
 
   <li>Identificar entidades , atributos e relacionamentos;</li>
 
