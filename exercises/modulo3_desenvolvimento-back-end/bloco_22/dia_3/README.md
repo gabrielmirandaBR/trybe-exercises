@@ -7,7 +7,7 @@
   
   <li>Alterar tabelas existentes;</li>
 
-  <li>Deletar uma tabela;;</li>
+  <li>Deletar uma tabela;</li>
 
   <li>Usar um INDEX.</li>
   
