@@ -1,0 +1,20 @@
+{
+  "name": "dia_3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test1": "mocha tests1",
+    "test2": "mocha tests2",
+    "start": "node index.js",
+    "exercise1": "node exercise1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.0",
+    "sinon": "^11.1.2"
+  }
+}
