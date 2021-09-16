@@ -1,0 +1,25 @@
+{
+  "name": "dia_5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "exercise1": "nodemon exercise1.js",
+    "exercise2": "nodemon exercise2.js",
+    "exercise3": "nodemon exercise3.js",
+    "exercise4": "nodemon exercise4.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-rescue": "^1.1.31"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
